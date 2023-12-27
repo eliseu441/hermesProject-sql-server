@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+
+
+@media  (min-width: 600px) and (min-height:400px) {
+    .header{
+        background: none;
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        width:100vw;
+        text-align:center;
+        z-index: 999;
+        padding: 0px 0;
+        overflow: hidden;
+    }
+    .info-intro{
+        overflow: none;
+        clip-path: polygon(1% 1%, 99% 0, 99% 99%, 1% 99%);
+        position: relative;
+        margin-left: 0vw;
+        height: 95vh;
+        width: 50vw;
+        background: none;
+        margin-top: -85vh;
+        cursor: pointer;
+        
+         
+    }
+    .expandido{
+        margin-top: -100vh;
+        animation: 1s ease-out 0s 1 slide-up;
+        cursor: pointer;
+         
+    }
+    .hide-intro{
+        padding-top: 2vh;
+        background-color: rgb(255, 255, 255, 0.07);
+        border-radius: 10%;
+        width: 32vw;
+        height: max-content;
+        margin-inline-start: 34vw;
+        justify-content: center;
+        animation: 3s show-up-img;
+        align-items: baseline;
+        margin-top: -1vh;
+        margin-bottom: 13vh;
+        font-family: 'Great Vibes';
+        font-size: 4vh!important;
+        overflow: hidden;
+        position: relative;
+        overflow: none;
+         z-index: 501;
+         cursor: pointer;
+    }
+    @keyframes slide-up {
+        0%{ -webkit-transform: translateY(-50%); }
+        100%{ -webkit-transform: translateY(0%); }
+    }
+        
+    @keyframes show-up-img {
+        0%    { opacity: 0; }
+        50%    { opacity: 0; }
+        100%  { opacity: 1; }
+    }
+
+
+
+    }
+
+    @media   (max-width: 600px) or (max-height:400px){
+        .header{
+            display: none;
+        }
+        .show-intro{
+            display: none;
+        }
+        .hide-intro{
+            display: none;
+        }
+        .info-intro{
+            display: none;
+        }
+        .info-intro2{
+            display: none;
+        }
+}
+    
