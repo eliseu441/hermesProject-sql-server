@@ -1,0 +1,13 @@
+@media (min-width: 600px) and (min-height: 400px) {
+    @import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap");
+    .page-sculp{
+        color: aliceblue;
+    }
+
+
+}
+@media (max-width: 600px) or (max-height:400px) {
+    .page-sculp {
+        display: none;
+   }
+}

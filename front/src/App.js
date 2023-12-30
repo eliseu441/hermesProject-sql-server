@@ -7,7 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './layout/header/Header'
 import Home from './pages/Home/Home'
 import Types from './pages/Types/Types'
+import PaintPage from './pages/Types/PaintPage/PaintPage'
 import SideNavBar from './layout/sidebar/SideNavBar';
+import SculpPage from './pages/Types/SculpPage/SculpPage.jsx';
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/types" element={<Types />} />
+          <Route path="/paintPage" element={<PaintPage />} />
+          <Route path="/sculpPage" element={<SculpPage />} />
       </Routes>
     </Router>
   );

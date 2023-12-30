@@ -24,6 +24,7 @@
     }
 
     .fixed-cube {
+        overflow: hidden;
         position: absolute;
         width: 100vw;
         height: 100vh;
@@ -38,7 +39,7 @@
 
   
     .loading {
-        animation: 5s show-cube;
+        animation: 3s show-cube;
         opacity: 1;
         cursor: pointer;
         position: absolute;
@@ -81,7 +82,7 @@
         100%    { opacity: 1; }
     }
     .sculp{
-        animation: 6s linear diagonal-slide-sculp;
+        animation: 5s linear diagonal-slide-sculp;
         margin-top: -55vh;
         margin-left: -20vw;
         background: none;
@@ -112,7 +113,7 @@
         }
       }
     .inventions {   
-        animation: 7s show-icons, 9s linear diagonal-slide-invenction;
+        animation: 5s show-icons, 6s linear diagonal-slide-invenction;
         margin-top: -35vh;
         margin-left: 23vw;
         background: none;
@@ -138,7 +139,7 @@
       }
 
       .art {   
-        animation: 10s show-icons, 12s linear diagonal-slide-art;
+        animation: 6s show-icons, 7s linear diagonal-slide-art;
         border: 20px groove rgb(158, 92, 44, 0.7);
         margin-top: 24vh;
         margin-left: 26vw;
@@ -163,7 +164,7 @@
         }
       }
     .buildings{
-        animation: 14s show-icons, 15s linear diagonal-slide-buildings;
+        animation: 7.5s show-icons, 8.2s linear diagonal-slide-buildings;
         border-radius: 1vh;
         margin-top: 24vh;
         margin-left: -20vw;

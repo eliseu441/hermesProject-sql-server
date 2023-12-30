@@ -56,7 +56,7 @@ function Types() {
             setTimeout(
                 async function () {
                     setIndexText(3)
-                }, 15000
+                }, 8500
             );
         } 
 }
@@ -69,9 +69,13 @@ return (
         <div class='fixed-cube' >
             <div class='group-texts' style={{ zIndex: indexText }}>
             <div class='buildings-text'><p>{buildingsDesc}</p></div>
+            <Link to="/sculpPage" >
             <div class='sculp-text'><p>{sculpturesDesc}</p></div>
+            </Link>
             <div class='invention-text'><p>{inventionsDesc}</p></div>
+                    <Link to="/paintPage" >
             <div class='art-text'><p>{artDesc}</p></div>
+           </Link>
             </div>
             <div class="loading" onClick={e => openCube('cube')}>
             

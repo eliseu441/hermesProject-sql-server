@@ -109,7 +109,7 @@
 
     .text-frame-1 {
 
-        animation: 7.2s show-up-txt;
+        animation: 5.2s show-up-txt;
         background: none !important;
         position: relative;
         margin-top: -55vh !important;
@@ -240,9 +240,21 @@
         background: none;
 
     }
+    @keyframes show-up-img-faster {
+        0% {
+            opacity: 0;
+        }
 
+        70% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
     .img3 {
-        animation: 7s show-up-img;
+        animation: 5s show-up-img-faster;
         width: 59.8vw;
         height: 80vh;
         overflow: hidden;
