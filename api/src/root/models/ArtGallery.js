@@ -35,6 +35,24 @@ class ArtGallery {
             throw error;
         }
     }
+    async getSculpCarousel(params) {
+        try {
+            
+            const result = await this.app.root.services.ArtGallery.getSculpCarousel(params)
+            return result
+        } catch (error) {
+            throw error;
+        }
+    }
+    async getSculptorsCombo(params) {
+        try {
+            
+            const result = await this.app.root.services.ArtGallery.getSculptorsCombo(params)
+            return result
+        } catch (error) {
+            throw error;
+        }
+    }
 }
 
 module.exports = (app) => new ArtGallery(app);

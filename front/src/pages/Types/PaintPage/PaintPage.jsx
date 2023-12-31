@@ -21,23 +21,23 @@ function PaintPage() {
     const [comboAuthor, setComboAuthor] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    useEffect(  () => {
+    useEffect(() => {
         callApis()
 
 
 
 
-        
+
     }, []);
 
-    
+
 
     const callApis = async (id_author) => {
-        
+
 
         setLoading(true)
         let page = 1
-         setPage(1)
+        setPage(1)
         const pageIndexes = [
             [8, 9, 7, 6, 5, 4],
             [7, 8, 9, 7, 6, 5],
@@ -46,20 +46,20 @@ function PaintPage() {
             [4, 5, 6, 7, 8, 9],
             [3, 4, 5, 6, 7, 8],
         ];
-        
+
         if (page >= 0 && page <= pageIndexes.length + 1) {
             const newIndexValues = pageIndexes[page - 1];
             for (let i = 0; i < indexes.length; i++) {
                 setIndexes(newIndexValues)
             }
         }
-        let paints = await API.getAllArts({id: id_author}).then(e => {
+        let paints = await API.getAllArts({ id: id_author }).then(e => {
             setPaints(e)
-           
+
         }).catch(console.error)
         let combo = await API.getPaintersCombo().then(e => {
             setComboAuthor(e)
-           
+
         }).catch(console.error)
 
         setLoading(false)
@@ -109,7 +109,7 @@ function PaintPage() {
                 [4, 5, 6, 7, 8, 9],
                 [3, 4, 5, 6, 7, 8],
             ];
-            
+
             if (page >= 0 && page <= pageIndexes.length + 1) {
                 const newIndexValues = pageIndexes[page - 1];
                 for (let i = 0; i < indexes.length; i++) {
@@ -122,35 +122,40 @@ function PaintPage() {
 
     return (
         <>
-        
-{loading == true? 
+
+{loading == true ?
                 <div class='loader-background' >
                     <p>Loading Images</p>
                     <div class="loader">
                     </div>
 
                 </div>
-: <></>
-}
+                : <></>
+            }
             <div class='paint-page '>
+            
                 <img src={napoleon} width='100' class={sidebar == false ? "logo-sidebar-authors" : "logo-sidebar-authors logo-expanded"} onClick={e => setSidebar(!sidebar)} />
 
-
-                <div className={sidebar == false ? "sidebar-authors-border" : "sidebar-authors-border side-expanded"}>
-
+                
+                <div className={sidebar == false ? "sidebar-authors-border" : "sidebar-authors-border side-expanded-background"}>
                 </div>
-                <div className={sidebar == false ? "sidebar-authors" : "sidebar-authors side-expanded-background"}>
+                <div className={sidebar == false ? "sidebar-authors" : "sidebar-authors side-expanded"}>
                     <div class='choose-author'>
                         <p>author    </p>
+                        {sidebar == true?
                         <DropdownList
                             defaultValue="SANDRO BOTICELLI"
-                            data={comboAuthor? comboAuthor : ['']}
+                            data={comboAuthor ? comboAuthor : ['']}
                             dataKey='ID'
                             textField='NAME'
-                            onChange={e=> callApis(e.ID)}
+                            onChange={e => callApis(e.ID)}
                         />
+                        : <></>}
                     </div>
                 </div>
+
+               
+                
 
                 <div class="cover">
                     <div class="book">
@@ -170,51 +175,51 @@ function PaintPage() {
 
 
 
-                       {paints[1] ?  <label class={page > 1 ? "book__page page-2 next-page" : "book__page page-2"} style={{ zIndex: indexes[1]  }} >
+                        {paints[1] ? <label class={page > 1 ? "book__page page-2 next-page" : "book__page page-2"} style={{ zIndex: indexes[1] }} >
                             <div class={page < 2 ? "book__page-front2 page_format" : "book__page-front page_format prev-page"}>
                                 <div>
-                                    <img src={paints.length > 2 ? `/images/${paints[0].FILE_NAME}` : ''} width='100' class='book-img' />
+                                    <img src={paints.length > 2 ? `/images/paintings/${paints[0].FILE_NAME}` : ''} width='100' class='book-img' />
                                     <p class="book-author">{paints.length > 2 ? `${paints[0].PAINT_NAME}` : ''}</p>
                                 </div>
                             </div>
                             <div class="book__page-back2 page_format">
                                 <div>
-                                    <img src={paints.length > 2 ? `/images/${paints[1].FILE_NAME}` : ''} width='100' class='book-img col-12' />
+                                    <img src={paints.length > 2 ? `/images/paintings/${paints[1].FILE_NAME}` : ''} width='100' class='book-img col-12' />
                                     <p class="book-author">{paints.length > 2 ? `${paints[1].PAINT_NAME}` : ''}</p>
                                 </div>
 
                             </div>
-                        </label>: <></>}
-                       <label class={page > 2 ? "book__page page-2 next-page" : "book__page page-2"} style={{ zIndex: indexes[2]  }} >
+                        </label> : <></>}
+                        <label class={page > 2 ? "book__page page-2 next-page" : "book__page page-2"} style={{ zIndex: indexes[2] }} >
                             <div class={page < 3 ? "book__page-front2 page_format" : "book__page-front page_format prev-page"}>
                                 <div>
-                                    <img src={paints.length > 2 ? `/images/${paints[2].FILE_NAME}` : ''} width='100' class='book-img' />
+                                    <img src={paints.length > 2 ? `/images/paintings/${paints[2].FILE_NAME}` : ''} width='100' class='book-img' />
                                     <p class="book-author">{paints.length > 2 ? `${paints[2].PAINT_NAME}` : ''}</p>
                                 </div>
                             </div>
                             <div class="book__page-back2 page_format">
                                 <div>
-                                    <img src={paints.length > 2 ? `/images/${paints[3].FILE_NAME}` : ''} width='100' class='book-img col-12' />
+                                    <img src={paints.length > 2 ? `/images/paintings/${paints[3].FILE_NAME}` : ''} width='100' class='book-img col-12' />
                                     <p class="book-author">{paints.length > 2 ? `${paints[3].PAINT_NAME}` : ''}</p>
                                 </div>
 
                             </div>
                         </label>: <></>
-                       {paints[5] ?  <label class={page > 3 ? "book__page page-2 next-page" : "book__page page-2"} style={{ zIndex: indexes[3]  }} >
+                        {paints[5] ? <label class={page > 3 ? "book__page page-2 next-page" : "book__page page-2"} style={{ zIndex: indexes[3] }} >
                             <div class={page < 4 ? "book__page-front2 page_format" : "book__page-front page_format prev-page"}>
                                 <div>
-                                    <img src={paints.length > 2 ? `/images/${paints[4].FILE_NAME}` : ''} width='100' class='book-img' />
+                                    <img src={paints.length > 2 ? `/images/paintings/${paints[4].FILE_NAME}` : ''} width='100' class='book-img' />
                                     <p class="book-author">{paints.length > 2 ? `${paints[4].PAINT_NAME}` : ''}</p>
                                 </div>
                             </div>
                             <div class="book__page-back2 page_format">
                                 <div>
-                                    <img src={paints.length > 2 ? `/images/${paints[5].FILE_NAME}` : ''} width='100' class='book-img col-12' />
+                                    <img src={paints.length > 2 ? `/images/paintings/${paints[5].FILE_NAME}` : ''} width='100' class='book-img col-12' />
                                     <p class="book-author">{paints.length > 2 ? `${paints[5].PAINT_NAME}` : ''}</p>
                                 </div>
 
                             </div>
-                        </label>: <></>}
+                        </label> : <></>}
 
 
 

@@ -107,7 +107,6 @@ module.exports = class SQLServerMapper extends BancoMetodos
 
             throw new Error(error.stack);
         }
-        console.log(retorno)
         return retorno;
     }
 

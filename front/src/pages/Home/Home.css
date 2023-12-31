@@ -68,7 +68,6 @@
         position: static;
         display: flex;
         justify-content: center;
-        z-index: -1;
         background-color: #000000;
     }
 

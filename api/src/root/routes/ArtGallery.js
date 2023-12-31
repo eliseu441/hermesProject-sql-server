@@ -29,5 +29,19 @@ module.exports = (app) => {
         .catch(err => next(err))
 
     });
+    router.get('/getSculpCarousel', function (req,res,next) {
+ 
+        app.root.models.ArtGallery.getSculpCarousel(req.query)
+        .then(result => res.status(result.status ? result.status : 200).json(result))
+        .catch(err => next(err))
+
+    });
+    router.get('/getSculptorsCombo', function (req,res,next) {
+ 
+        app.root.models.ArtGallery.getSculptorsCombo(req.query)
+        .then(result => res.status(result.status ? result.status : 200).json(result))
+        .catch(err => next(err))
+
+    });
     return router;
 };

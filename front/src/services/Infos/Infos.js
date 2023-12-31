@@ -55,7 +55,40 @@ class pageEdit {
         }
 
     };
+    getSculpCarousel = async (params) => {
 
+        try {
+            const response = await API.get(`/getSculpCarousel`, { params });
+
+            if (response.status === 200) {
+                const data = response.data;
+                return data;
+            }
+
+            return [];
+
+        } catch (err) {
+            throw err;
+        }
+
+    };
+    getSculptorsCombo = async (params) => {
+
+        try {
+            const response = await API.get(`/getSculptorsCombo`, { params });
+
+            if (response.status === 200) {
+                const data = response.data;
+                return data;
+            }
+
+            return [];
+
+        } catch (err) {
+            throw err;
+        }
+
+    };
 
 
 
