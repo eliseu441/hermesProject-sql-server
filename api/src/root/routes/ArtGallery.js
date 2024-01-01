@@ -43,7 +43,7 @@ module.exports = (app) => {
         .catch(err => next(err))
 
     });
-    router.get('/', function (req,res,next) {
+    router.get('/getBuildTable', function (req,res,next) {
  
         app.root.models.ArtGallery.getBuildTable(req.query)
         .then(result => res.status(result.status ? result.status : 200).json(result))

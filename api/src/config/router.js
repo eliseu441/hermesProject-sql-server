@@ -10,13 +10,7 @@ module.exports = app => {
         
         protected.use('', app.root.routes.ArtGallery);
         
-        app.use(`${ app_path }/`, protected);
-        app.use(`${ app_path }/getVolumeSites`, protected);
-        app.use(`${ app_path }/getAllArts`, protected);
-        app.use(`${ app_path }/getPaintersCombo`, protected);
-        app.use(`${ app_path }/getSculpCarousel`, protected);
-        app.use(`${ app_path }/getSculptorsCombo`, protected);
-        app.use(`${ app_path }/getBuildContent`, protected);
+        app.use(`${ app_path }/api`, protected);
         
         app.use((err, req, res, next) => {
             
