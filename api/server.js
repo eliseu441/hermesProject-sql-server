@@ -17,28 +17,15 @@ app.use(express.urlencoded({ extended: true }));
 
 const APP_PATH = process.env.app_path ? process.env.app_path : ''
 
-app.use(APP_PATH, express.static(__dirname + '/portal'))
+//app.use(APP_PATH, express.static(__dirname + '/portal'))
 
-app.use(APP_PATH, express.static(process.env.DIR_STORAGE))
+//app.use(APP_PATH, express.static(process.env.DIR_STORAGE))
 
 const PORT = process.env.PORT ? process.env.PORT : process.env.APP_PORT
 
 app.set('port', PORT)
 
 const server = app.listen(PORT, () => console.log(`Server listening on port ${ PORT }`))
-
-/** ELASTIC SEARCH APM */
-
-// const apm = require('./src/config/elastic')
-
-// app.set('apm', apm)
-
-/** SOCKET SERVER */      
-// require('./src/config/socket')(server, { 
-//     path: APP_PATH + '/socket.io'
-// },app) 
-
-/** SOCKET SERVER */
 
 const io = require('socket.io')(server, { path: '' + '/socket.io' })
 
@@ -48,5 +35,4 @@ const { socket } = app.config
 
 io.on('connection', client => {
     socket.onConnect(client, io)
-    // socket.onDisconnect(client, io)
 });
