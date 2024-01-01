@@ -89,8 +89,40 @@ class pageEdit {
         }
 
     };
+    getBuildTable = async (params) => {
 
+        try {
+            const response = await API.get(`/getBuildTable`, { params });
 
+            if (response.status === 200) {
+                const data = response.data;
+                return data;
+            }
+
+            return [];
+
+        } catch (err) {
+            throw err;
+        }
+
+    };
+    getBuildContent = async (params) => {
+
+        try {
+            const response = await API.get(`/getBuildContent`, { params });
+
+            if (response.status === 200) {
+                const data = response.data;
+                return data;
+            }
+
+            return [];
+
+        } catch (err) {
+            throw err;
+        }
+
+    };
 
 }
 

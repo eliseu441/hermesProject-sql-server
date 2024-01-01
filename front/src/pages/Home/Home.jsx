@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import './Home.css';
 import img_1 from './img/img_1.png';
 import img_2 from './img/img_2.png';
-import img_3 from './img/img_3.png';
+import img_3 from './img/img_4.png';
 import moldura from './img/moldura_final.png';
 import moldura_texto from './img/moldura_texto.png';
 import pergaminho from './img/pergaminho.png';
@@ -27,6 +27,7 @@ function Home() {
                 </div>
 
                 <div className="row frame-intro ">
+                    <div class='back-moldure-clip'></div>
                     <div class='back-moldure'></div>
                     <div class="d-flex justify-content-center  moldura-home " >
 
@@ -34,15 +35,15 @@ function Home() {
 
 
                     </div>
-                    <div class="d-flex justify-content-center mt-5 img1" >
+                    <div class="d-flex justify-content-center  mt-5 img1" >
                         <img src={img_1} alt='' class="img-d-1" width="100" />
 
                     </div>
-                    <div class="d-flex justify-content-center  img2"href="/personalize" >
+                    <div class="d-flex justify-content-start  img2"href="/personalize" >
                         <img src={img_2} alt='' class="img-d-2" width="100" href="/personalize"/>
 
                     </div>
-                    <div class="d-flex justify-content-center row  img3" >
+                    <div class="d-flex justify-content-start row  img3" >
                     <Link to="/types" >
                         <img src={img_3} alt='' class="img-d-3" width="100" />
                     </Link> 

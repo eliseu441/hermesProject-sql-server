@@ -53,6 +53,24 @@ class ArtGallery {
             throw error;
         }
     }
+    async getBuildTable(params) {
+        try {
+            
+            const result = await this.app.root.services.ArtGallery.getBuildTable(params)
+            return result
+        } catch (error) {
+            throw error;
+        }
+    }
+    async getBuildContent(params) {
+        try {
+            
+            const result = await this.app.root.services.ArtGallery.getBuildContent(params)
+            return result
+        } catch (error) {
+            throw error;
+        }
+    }
 }
 
 module.exports = (app) => new ArtGallery(app);

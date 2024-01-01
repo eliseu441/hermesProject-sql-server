@@ -113,6 +113,62 @@ class ArtGallery {
             throw error;
         }
     }
+    async getBuildTable(params) {
+        try {
+            const sql = await dbFIBRA.query(`
+            SELECT TOP(100) 
+            [ID]
+          ,[BUILD]
+          ,[COUNTRY]
+          ,[YEAR]
+      FROM [ART_GALLERY].[dbo].[TBF_BUILDINGS]
+          
+            `);
+            return sql
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }   
+    }
+    async getBuildContent(params) {
+        try {
+            console.log(params)
+            if(!params.id_build){
+
+                    let erro = new Error('build_id not found ou database reference is empty.');
+                    erro.status = 500
+                    throw erro
+                
+            }
+                
+            const images = await dbFIBRA.query(`
+            SELECT TOP (1000) 
+            B.ID
+          ,B.BUILD
+          ,B.COUNTRY
+          ,B.YEAR
+          ,CONCAT( B.FILE_NAME , A.FILE_NAME ) AS PATH_NAME
+  
+      FROM [ART_GALLERY].[dbo].[TBF_RELATION_IMG_BUILDINGS] AS A
+      INNER JOIN TBF_BUILDINGS B ON A.ID_BUILD = B.ID
+      WHERE A.ID_BUILD = ${parseInt(params.id_build)}
+          
+            `);
+            const descriptions = await dbFIBRA.query(`
+            SELECT TOP (1) 
+            [ID]
+            ,CONCAT( BUILD , '-', COUNTRY ) AS TITLE
+            ,[DESCRIPTION]
+        FROM [ART_GALLERY].[dbo].[TBF_BUILDINGS] WHERE ID = ${parseInt(params.id_build)}
+          
+            `);
+            
+            return {images, descriptions}
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }   
+    }
     
 }
 

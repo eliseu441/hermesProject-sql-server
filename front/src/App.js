@@ -10,6 +10,7 @@ import Types from './pages/Types/Types'
 import PaintPage from './pages/Types/PaintPage/PaintPage'
 import SideNavBar from './layout/sidebar/SideNavBar';
 import SculpPage from './pages/Types/SculpPage/SculpPage.jsx';
+import BuildingsPage from './pages/Types/BuildingsPage/BuildingsPage.jsx'
 
 
 function App() {
@@ -19,9 +20,11 @@ function App() {
       <SideNavBar/>
       <Routes>
           <Route path="/" element={<Home />} />
+
           <Route path="/types" element={<Types />} />
           <Route path="/paintPage" element={<PaintPage />} />
           <Route path="/sculpPage" element={<SculpPage />} />
+          <Route path="/buildingsPage" element={<BuildingsPage />} />
       </Routes>
     </Router>
   );
