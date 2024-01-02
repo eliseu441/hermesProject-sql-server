@@ -176,7 +176,6 @@ function SculpPage() {
             </div>
 
 
-
         </>
     )
 }

@@ -1,4 +1,4 @@
-const env_file = '.env' + (process.env.NODE_ENV != undefined ? `.${process.env.NODE_ENV}` : '');
+const env_file = 'env' + (process.env.NODE_ENV != undefined ? `.${process.env.NODE_ENV}` : '');
 
 const path = __dirname + '/' + env_file;
 

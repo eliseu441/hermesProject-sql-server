@@ -16,7 +16,7 @@ function SculpPage() {
     const [comboSculp, setComboSculp] = useState(false);
     const [sidebar, setSidebar] = useState(false);
     const [slides, setSlides] = useState(false);
-    
+
     const [author, setAuthor] = useState('MICHELANGELO');
 
 
@@ -45,22 +45,22 @@ function SculpPage() {
             console.log(res)
             let slidesFinal = []
             let contadorSlides = 0
-            for(let el of res){
+            for (let el of res) {
                 console.log(el)
                 slidesFinal = [
-                    ...slidesFinal[contadorSlides]? slidesFinal[contadorSlides] : slidesFinal, <img src={`/images/sculptures/${el.FILE_NAME}`} alt={`${el.ID_INDEX}`} />
+                    ...slidesFinal[contadorSlides] ? slidesFinal[contadorSlides] : slidesFinal, <img src={`/images/sculptures/${el.FILE_NAME}`} alt={`${el.ID_INDEX}`} />
                 ]
                 console.log(slides)
-                contadorSlides ++
+                contadorSlides++
             }
             setSlides(slidesFinal)
         }).catch(console.error)
-console.log(slides)
+        console.log(slides)
 
 
         let combo = await API.getSculptorsCombo().then(e => {
             setComboSculp(e)
-        
+
         }).catch(console.error)
         setLoading(false)
     }
@@ -72,7 +72,7 @@ console.log(slides)
 
     return (
         <>
-        {loading == true ?
+            {loading == true ?
                 <div class='loader-background' >
                     <p>Loading Sculptures</p>
                     <div class="loader">
@@ -80,7 +80,7 @@ console.log(slides)
 
                 </div>
                 : <></>}
-            
+
             <div class='slide-cesar'>
 
 
@@ -89,15 +89,15 @@ console.log(slides)
                     <img src={cesar} width='100' class="logo-header-cesar" onClick={e => setSidebar(!sidebar)} />
                     <div class='combo-sidebar '>
                         <p >Author:</p>
-                        {sidebar == true &&loading == false && comboSculp.length>1 ? 
-                        <DropdownList
-                        defaultValue=""
-                        data={comboSculp ? comboSculp : ['']}
-                        dataKey='ID'
-                        textField='NAME'
-                        onChange={e => callApis(e.ID, e.NAME)}
-                    />
-                        : <></>} 
+                        {sidebar == true && loading == false && comboSculp.length > 1 ?
+                            <DropdownList
+                                defaultValue=""
+                                data={comboSculp ? comboSculp : ['']}
+                                dataKey='ID'
+                                textField='NAME'
+                                onChange={e => callApis(e.ID, e.NAME)}
+                            />
+                            : <></>}
                     </div>
                 </div>
 
@@ -106,10 +106,10 @@ console.log(slides)
                 <div class='carousel'>
 
                     {slides && loading == false ?
-<div >
-                <p class='culpTitle'>{author}</p>
+                        <div >
+                            <p class='culpTitle'>{author}</p>
 
-                        <Carousel slides={slides} autoplay={false} interval={5000} />
+                            <Carousel slides={slides} autoplay={false} interval={5000} />
                         </div>
                         : <></>}
                 </div>
@@ -117,7 +117,10 @@ console.log(slides)
 
 
 
+            <div class="aviso">
 
+                <h4>Atualmente a aplicação é focara para desktop, portanto ainda não ha portabilidade menor que 600px de largura por 400px de altura, um tamanho menos implicaria na perca da qualidade das imagens e experiencias.</h4>
+            </div>
 
         </>
     )

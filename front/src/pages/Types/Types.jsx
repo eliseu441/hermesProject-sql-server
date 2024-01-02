@@ -104,6 +104,12 @@ function Types() {
                 </p>
 
             </div>
+
+
+            <div class="aviso">
+
+<h4>Atualmente a aplicação é focara para desktop, portanto ainda não ha portabilidade menor que 600px de largura por 400px de altura, um tamanho menos implicaria na perca da qualidade das imagens e experiencias.</h4>
+</div>
         </>
     )
 }
