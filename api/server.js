@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const APP_PATH = process.env.app_path ? process.env.app_path : ''
 
-//app.use(APP_PATH, express.static(__dirname + '/portal'))
+app.use(APP_PATH, express.static(__dirname + '/portal'))
 
 //app.use(APP_PATH, express.static(process.env.DIR_STORAGE))
 

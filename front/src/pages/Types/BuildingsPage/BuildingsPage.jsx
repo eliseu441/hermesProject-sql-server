@@ -161,7 +161,7 @@ function SculpPage() {
                         <div class={changeModal == false ? 'modal-body p-1 modal-body p-1 background' : 'modal-body p-1 modal-body p-1'}>
 
                             
-                            <div class={changeModal == false && loading !== 0 ? 'build-information' : 'diplay-none'}>
+                            <div class={changeModal == false && loading == 0 ? 'build-information' : 'diplay-none'}>
                                 <p>{description !== '' ? description : 'No description avaliable for this building untill now'}</p>
                             </div>
                             <div class={changeModal == true ? 'img-modal' : 'diplay-none'}>

@@ -369,7 +369,16 @@ z-index: 9999999999;
 margin-top: -20vh;
 
 }
-
+@keyframes load {
+    50% {
+      width: 100%;
+    }
+  
+    100% {
+      right: 0;
+      left: unset;
+    }
+  }
 .loader {
     width: 60vw;
     height: 1.5vh;
@@ -396,16 +405,6 @@ margin-top: -20vh;
     justify-content: center;
   }
   
-  @keyframes load {
-    50% {
-      width: 100%;
-    }
-  
-    100% {
-      right: 0;
-      left: unset;
-    }
-  }
   .choose-author{
     margin-top: 20vh;
     background-color: rgb(245, 245, 245, 0.5);

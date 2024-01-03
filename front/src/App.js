@@ -11,6 +11,7 @@ import PaintPage from './pages/Types/PaintPage/PaintPage'
 import SideNavBar from './layout/sidebar/SideNavBar';
 import SculpPage from './pages/Types/SculpPage/SculpPage.jsx';
 import BuildingsPage from './pages/Types/BuildingsPage/BuildingsPage.jsx'
+import InverntorsPage from './pages/inventions/InverntorsPage.jsx'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/paintPage" element={<PaintPage />} />
           <Route path="/sculpPage" element={<SculpPage />} />
           <Route path="/buildingsPage" element={<BuildingsPage />} />
+          <Route path="/inventions" element={<InverntorsPage />} />
       </Routes>
     </Router>
   );

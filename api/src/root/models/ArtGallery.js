@@ -71,6 +71,15 @@ class ArtGallery {
             throw error;
         }
     }
+    async getInventors(params) {
+        try {
+            
+            const result = await this.app.root.services.ArtGallery.getInventors(params)
+            return result
+        } catch (error) {
+            throw error;
+        }
+    }
 }
 
 module.exports = (app) => new ArtGallery(app);

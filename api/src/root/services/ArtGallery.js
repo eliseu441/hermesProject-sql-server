@@ -53,6 +53,10 @@ class ArtGallery {
             throw error;
         }
     }
+
+
+
+    
     async getSculpCarousel(params) {
         try {
             let id_artitst = params.id ? parseInt(params.id)  : 10
@@ -122,7 +126,6 @@ class ArtGallery {
           ,[COUNTRY]
           ,[YEAR]
       FROM [ART_GALLERY].[dbo].[TBF_BUILDINGS]
-          
             `);
             return sql
         } catch (error) {
@@ -164,6 +167,22 @@ class ArtGallery {
             `);
             
             return {images, descriptions}
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }   
+    }
+
+    async getInventors(params) {
+        try {
+            const sql = await dbFIBRA.query(`
+            SELECT TOP (1000) [ID]
+            ,[NAME]
+            ,CONCAT ( [INVENTION] , ' - ',[INVENTION_YEAR],' - ' ,[INVENTION_DESCRIPTION]) AS DESCRIPTION
+            ,[FILE_NAME]
+            FROM [ART_GALLERY].[dbo].[TBF_INVENTORS] ORDER BY ID ASC
+            `);
+            return sql
         } catch (error) {
             console.error(error);
             throw error;

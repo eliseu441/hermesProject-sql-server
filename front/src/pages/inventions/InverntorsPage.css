@@ -1,0 +1,89 @@
+@media (min-width: 600px) and (min-height: 400px) {
+    @import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+    .page-inverntors {
+        width: 100vw;   
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inventor-layer-intro{
+        width: 100%;
+        height: 25vh;
+        background: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    @keyframes slide-layers {
+        0% { -webkit-transform: translateX(100%); }
+        100% { -webkit-transform: translateX(0); }
+    }
+    .inventor-layer{
+        width: 100%;
+        height: 25vh;
+        margin-left: 10px;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-y: scroll    ;
+        opacity: 1;
+        margin-top: 2vh;
+        padding-right: 4%;
+       
+    }
+    .inventor-layer::-webkit-scrollbar-thumb {
+        background: #000000!important;
+      }
+      
+    .intro-iventors{
+
+        width: 100vw;
+        letter-spacing: -0.7px;
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        font-style: italic;
+        color: white;
+        text-shadow: -1px -1px 8px rgba(255, 255, 255, 0.5);
+        font-size: 3vh;
+        padding: 0 4vh 0 4vh;
+    }
+    .description-iventors{
+
+        width: 100vw;
+        letter-spacing: -0.7px;
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        font-style: italic;
+        background: linear-gradient(90deg, rgb(80, 142, 199) 0%, rgba(37,37,168,1) 48%, rgb(99, 149, 196) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 0.2px;
+
+        text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.9);
+        font-size: 2.7vh;
+        
+        padding: 2vh 4vh 0 4vh;
+    }
+    .logo-inventor{
+        width: 15vw;
+        padding: 1vh;
+        border-radius: 20px;
+
+    }
+
+}
+
+@media (max-width: 600px) or (max-height:400px) {
+    .page-inverntors {
+        display: none;
+    }
+}
