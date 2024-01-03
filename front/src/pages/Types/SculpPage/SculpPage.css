@@ -111,7 +111,7 @@
         font-weight: 600;
         font-style: italic;
         background: linear-gradient(121deg, rgb(235, 196, 6) 0%, rgba(255, 162, 0, 1) 80%);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
 
         text-shadow: -1px -1px 8px rgba(255, 255, 255, 0.5);
@@ -150,7 +150,7 @@
     letter-spacing: 1.1px;
     background: rgb(255,255,255);
     background: linear-gradient(121deg, rgba(255,255,255,1) 0%, rgba(168,168,168,1) 46%, rgba(255,255,255,1) 100%);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: -1px -1px 8px rgba(255, 255, 255, 0.3);
 

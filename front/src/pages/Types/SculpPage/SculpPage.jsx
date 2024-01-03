@@ -12,12 +12,12 @@ import resized4 from './img/Michellangelo/pieta.jpg';
 import cesar from './img/cesar_boust_nobackground.png';
 
 function SculpPage() {
+    const [author, setAuthor] = useState("MICHELANGELO");
     const [loading, setLoading] = useState(false);
     const [comboSculp, setComboSculp] = useState(false);
     const [sidebar, setSidebar] = useState(false);
     const [slides, setSlides] = useState(false);
 
-    const [author, setAuthor] = useState('MICHELANGELO');
 
 
     useEffect(() => {
@@ -28,8 +28,7 @@ function SculpPage() {
             <img src={resized3} alt="3" />,
             <img src={resized4} alt="4" />
         ]);*/
-
-        callApis()
+        callApis(10, 'MICHELANGELO')
 
 
 
@@ -105,7 +104,9 @@ function SculpPage() {
             <div class='page-sculp'>
                 <div class='carousel'>
 
+                
                     {slides && loading == false ?
+                    
                         <div >
                             <p class='culpTitle'>{author}</p>
 

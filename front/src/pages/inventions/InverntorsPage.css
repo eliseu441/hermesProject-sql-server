@@ -64,7 +64,7 @@
         font-weight: 600;
         font-style: italic;
         background: linear-gradient(90deg, rgb(80, 142, 199) 0%, rgba(37,37,168,1) 48%, rgb(99, 149, 196) 100%);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         letter-spacing: 0.2px;
 
