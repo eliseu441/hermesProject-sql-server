@@ -39,10 +39,14 @@ function Home() {
                         <img src={img_1} alt='' class="img-d-1" width="100" />
 
                     </div>
-                    <div class="d-flex justify-content-start  img2"href="/personalize" >
-                        <img src={img_2} alt='' class="img-d-2" width="100" href="/personalize"/>
-
+                    
+                    <div class="d-flex justify-content-start  img2" >
+                        
+                    <Link to="/epoch" >
+                        <img src={img_2} alt='' class="img-d-2" width="100" />
+                        </Link>
                     </div>
+                    
                     <div class="d-flex justify-content-start row  img3" >
                     <Link to="/types" >
                         <img src={img_3} alt='' class="img-d-3" width="100" />

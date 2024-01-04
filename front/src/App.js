@@ -12,6 +12,7 @@ import SideNavBar from './layout/sidebar/SideNavBar';
 import SculpPage from './pages/Types/SculpPage/SculpPage.jsx';
 import BuildingsPage from './pages/Types/BuildingsPage/BuildingsPage.jsx'
 import InverntorsPage from './pages/inventions/InverntorsPage.jsx'
+import EpochPage from './pages/Epoch/EpochPage.jsx'
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/sculpPage" element={<SculpPage />} />
           <Route path="/buildingsPage" element={<BuildingsPage />} />
           <Route path="/inventions" element={<InverntorsPage />} />
+          <Route path="/epoch" element={<EpochPage />} />
       </Routes>
     </Router>
   );
