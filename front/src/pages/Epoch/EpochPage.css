@@ -2,10 +2,14 @@
     @import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap");
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
 
-
+    @keyframes slide-epoch {
+        0% { -webkit-transform: translateY(-100%); }
+        100% { -webkit-transform: translateY(0%); }
+    }
     .page-epoch {
         overflow-x: scroll;
         width: max-content;
+        animation: 3s ease-in slide-epoch;
 
     }
 
@@ -24,17 +28,17 @@
 
     .epoch-year {
         min-width: 100px;
-        background-image: url("./img/seamless_ano.jpg");
+        background-image: url("./img/teste seamless - Copia.png");
         background-size: cover;
         background-repeat: repeat;
         background-position-x: 0%;
 
 
+        margin: 2px;
 
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0;
         padding: 0;
         width: 100px;
         height: 100%;
@@ -52,18 +56,20 @@
         box-shadow: 2px 0px 50px 67px rgba(0, 0, 0, 0.75);
 
     }
-    .year-1{
+    .year-bc{
         background-position-y: 0%;
     }
-    .year-2{
+    .year-I{
+        background-position-y: 6.3vh;
+    }
+    .year-II{
         background-position-y: 6.3vh;
     }
 
     .epoch-img {
-        padding: 0 20vw 0 20vw;
+        z-index: 4;
+        padding: 0 22vw 0 22vw;
         width: 47.5vw;
-        
-        margin: 2px;
 
         background-repeat: no-repeat;
         background-position-y: 100%;
@@ -79,13 +85,52 @@
 
     }
     .imgbc{
-        background-image: url("./img/img_bc.png");
+        background-image: url("./img/main-images/img_bc.png");
     }
-
-
     .imgI{
-        background-image: url("./img/img_I.jpg");
+        background-image: url("./img/main-images/img_I.jpg");
     }
+    .imgII{
+        background-image: url("./img/main-images/img_II.jpg");
+    }
+    .imgIII{
+        background-image: url("./img/main-images/img_III.jpg");
+    }
+    .imgIV{
+        background-image: url("./img/main-images/img_IV.jpg");
+    }
+    .imgV{
+        background-image: url("./img/main-images/img_V.jpg");
+    }
+    .imgVI{
+        background-image: url("./img/main-images/img_VI.jpg");
+    }
+    .imgVII{
+        background-image: url("./img/main-images/img_II.jpg");
+    }
+    .imgXIII{
+        background-image: url("./img/main-images/img_XIII.jpg");
+    }
+    .imgXIV{
+        background-image: url("./img/main-images/img_XIV.jpg");
+    }
+    .imgXV{
+        background-image: url("./img/main-images/img_XV.jpg");
+    }
+    .imgXVI{
+        background-image: url("./img/main-images/img_XVI.png");
+    }
+    .imgXVII{
+        background-image: url("./img/main-images/img_XVII.jpg");
+    }
+    .imgXVIII{
+        background-image: url("./img/main-images/img_XVIII.jpg");
+    }
+    .imgXIX{
+        background-image: url("./img/main-images/img_XIX.jpg");
+    }
+
+    
     .margin{
         margin-top: -9.5vh;
     }
@@ -105,56 +150,192 @@
         padding-right: 0.2vw;
     }
 
-    .options1 {
+
+
+    .optionsBC {
         justify-content: start;
-        background-image: url("./img/bc.jpg");
+        background-image: url("./img/bkg-options/bc.jpg");
     }
 
-    .options2 {
+    .optionsI {
         justify-content: end;
-        background-image: url("./img/I.jpg");
+        background-image: url("./img/bkg-options/I.jpg");
     }
+    .optionsII {
+        justify-content: start;
+        background-image: url("./img/bkg-options/II.jpg");
+    }
+    .optionsIII {
+        justify-content: end;
+        background-image: url("./img/bkg-options/III.jpg");
+    }
+    .optionsIV {
+        justify-content: start;
+        background-image: url("./img/bkg-options/IV.jpg");
+    }
+    .optionsV {
+        justify-content: start;
+        background-image: url("./img/bkg-options/V.jpg");
+    }
+    .optionsVI {
+        justify-content: end;
+        background-image: url("./img/bkg-options/VI.jpg");
+    }
+    .optionsVII  {
+        justify-content: start;
+        background-image: url("./img/bkg-options/I.jpg");
+    }
+    .optionsXIII {
+        justify-content: end;
+        background-image: url("./img/bkg-options/XIII.jpg");
+    }
+    .optionsXIV {
+        justify-content: start;
+        background-image: url("./img/bkg-options/XIV.jpg");
+    }
+    .optionsXV {
+        justify-content: end;
+        background-image: url("./img/bkg-options/XV.jpg");
+    }
+    .optionsXVI {
+        justify-content: start;
+        background-image: url("./img/bkg-options/XVI.png");
+    }
+    .optionsXVII {
+        justify-content: end;
+        background-image: url("./img/bkg-options/XVII.jpg");
+    }
+    .optionsXVIII {
+        justify-content: start;
+        background-image: url("./img/bkg-options/XVIII.jpg");
+    }
+    .optionsXIX {
+        justify-content: end;
+        background-image: url("./img/bkg-options/XIX.jpg");
+    }
+
+
 
     .option-content {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 12vw;
+        width: 16vw;
         height: 100%;
-        opacity: 0;
-    }
-
-    .option-content:hover {
-        
+        opacity: 0.5;
         text-align: center;
-        border-image: linear-gradient(180deg, rgba(0,0,0,1) 25%, rgba(255,145,0,1) 48%, rgba(0,0,0,1) 78%) 70;
-        border-width: 4px;
+        
+        border-image: linear-gradient(180deg, rgba(0,0,0,0.4) 25%, rgba(255,145,0,0.4) 48%, rgba(0,0,0,0.4) 78%) 70;
+        border-width: 3px;
         border-right-style: solid;
         border-left-style: solid;
-        opacity: 1;
-        background-color: rgb(0, 0, 0, 0.2);
-        cursor: pointer;
+        color: rgb(255, 255, 255, 1);
         font-family: 'Playfair Display', serif;
         font-weight: 600;
         letter-spacing: 1px;
+        font-size: 2.7vh;
+    }
+    
+
+    .option-content:hover {
+        border-image: linear-gradient(180deg, rgba(0,0,0,1) 25%, rgba(255,145,0,1) 48%, rgba(0,0,0,1) 78%) 70;
         color: white;
         text-shadow: -1px -1px 8px rgba(255, 255, 255, 0.5);
-        font-size: 20px;
+        opacity: 1;
+        background-color: rgb(0, 0, 0, 0.9);
+        cursor: pointer;
+        
     }
 
     .option-content p {
         transform: rotate(-90deg);
-        color: white;
     }
 
     .option-content:hover {
         opacity: 1;
     }
 
+    #modalEpoch .modal-dialog {
+        max-width: 90vw !important;
+        max-height: 70vh !important;
+        overflow: scroll!important;
+        
+    
+      }
+    
+      #modalEpoch .modal-content {
+        
+        overflow: scroll!important;
+        background-image: url("./img/modesty.jpg");
+        opacity: 1;
+        background-size: 101%;
+        background-repeat: no-repeat;
+        height: 100% !important;
+        background-color: black!important;
+      }
+
+      #modalEpoch .modal-header{
+
+        border: none!important;
+      }
+      .subTitleModal{
+        color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-family: 'Passion One', sans-serif;
+        font-size: 4vh;
+        margin: 0;
+        background: rgb(174, 118, 34);
+        background: linear-gradient(164deg, rgba(174, 118, 34, 1) 15%, rgb(255, 255, 255) 48%, rgba(174, 118, 34, 1) 83%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+    }
+    
+      .modal-title-epoch{
+    font-family: 'Passion One', sans-serif;
+    font-size: 4vh;
+    margin: 0;
+    background: rgb(174, 118, 34);
+    background: linear-gradient(164deg, rgba(174, 118, 34, 1) 15%, rgba(255, 190, 84, 1) 48%, rgba(174, 118, 34, 1) 83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+      }
+      .img-modal{
+
+        padding: 0 50px 0 50px;
+      }
+      .warning{
+        margin-top: 3vh;
+        color: rgb(255, 41, 41);
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 2vw;
+        text-shadow: -1px -1px 8px rgba(255, 255, 255, 0.5);
+        display: flex;
+        justify-content: center;
+      }
 
 
-
-
+      .button-return{
+        height: 4.5vh;
+        letter-spacing: 1.2px;
+        background-color: #ff9a3c;
+        font-weight: bolder;
+        color: white;
+        border: none;
+      }
+      .button-return:hover{
+        color: #ffffff;
+        background-color: #ff9a3c;
+        -webkit-box-shadow: 1px 2px 23px 0px #ff9a3c;
+      -moz-box-shadow: 1px 2px 23px 0px #ff9a3c;
+      box-shadow: 1px 2px 23px 0px #ff9a3c;
+        border: none;
+      }
 
 }
 

@@ -140,6 +140,40 @@ class pageEdit {
         }
 
     };
+    getEpochChoices = async (params) => {
+
+        try {
+            const response = await API.get(`/getEpochChoices`, { params });
+
+            if (response.status === 200) {
+                const data = response.data;
+                return data;
+            }
+
+            return [];
+
+        } catch (err) {
+            throw err;
+        }
+
+    };
+    getImagesCentury = async (params) => {
+
+        try {
+            const response = await API.get(`/getImagesCentury`, { params });
+
+            if (response.status === 200) {
+                const data = response.data;
+                return data;
+            }
+
+            return [];
+
+        } catch (err) {
+            throw err;
+        }
+
+    };
 
 }
 

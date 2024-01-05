@@ -286,7 +286,6 @@
         background-color: black;
         margin-right: 1vw;
         margin-top: 10vh;
-        filter: brightness(85%);
 
         clip-path: polygon(0% 0%, 0% 100%, 14.9% 100%, 14.9% 10.7%, 85.5% 10.7%, 85.5% 89.9%, 14.9% 89.9%, 14.9% 100%, 100% 100%, 100% 0%);
         width: 70vw;

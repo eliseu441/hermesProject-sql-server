@@ -64,5 +64,19 @@ module.exports = (app) => {
         .catch(err => next(err))
 
     });
+    router.get('/getEpochChoices', function (req,res,next) {
+ 
+        app.root.models.ArtGallery.getEpochChoices(req.query)
+        .then(result => res.status(result.status ? result.status : 200).json(result))
+        .catch(err => next(err))
+
+    });
+    router.get('/getImagesCentury', function (req,res,next) {
+ 
+        app.root.models.ArtGallery.getImagesCentury(req.query)
+        .then(result => res.status(result.status ? result.status : 200).json(result))
+        .catch(err => next(err))
+
+    });
     return router;
 };

@@ -80,6 +80,24 @@ class ArtGallery {
             throw error;
         }
     }
+    async getEpochChoices(params) {
+        try {
+            
+            const result = await this.app.root.services.ArtGallery.getEpochChoices(params)
+            return result
+        } catch (error) {
+            throw error;
+        }
+    }
+    async getImagesCentury(params) {
+        try {
+            
+            const result = await this.app.root.services.ArtGallery.getImagesCentury(params)
+            return result
+        } catch (error) {
+            throw error;
+        }
+    }
 }
 
 module.exports = (app) => new ArtGallery(app);

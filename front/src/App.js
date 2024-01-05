@@ -7,10 +7,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './layout/header/Header'
 import Home from './pages/Home/Home'
 import Types from './pages/Types/Types'
-import PaintPage from './pages/Types/PaintPage/PaintPage'
+import PaintPage from './pages/PaintPage/PaintPage'
 import SideNavBar from './layout/sidebar/SideNavBar';
-import SculpPage from './pages/Types/SculpPage/SculpPage.jsx';
-import BuildingsPage from './pages/Types/BuildingsPage/BuildingsPage.jsx'
+import SculpPage from './pages/SculpPage/SculpPage.jsx';
+import BuildingsPage from './pages/BuildingsPage/BuildingsPage.jsx'
 import InverntorsPage from './pages/inventions/InverntorsPage.jsx'
 import EpochPage from './pages/Epoch/EpochPage.jsx'
 
