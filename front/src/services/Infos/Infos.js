@@ -174,6 +174,41 @@ class pageEdit {
         }
 
     };
+    getBioArtists = async (params) => {
+
+        try {
+            const response = await API.get(`/getBioArtists`, { params });
+
+            if (response.status === 200) {
+                const data = response.data;
+                return data;
+            }
+
+            return [];
+
+        } catch (err) {
+            throw err;
+        }
+
+    };
+    getBCbuilds = async (params) => {
+
+        try {
+            const response = await API.get(`/getBCbuilds`, { params });
+
+            if (response.status === 200) {
+                const data = response.data;
+                return data;
+            }
+
+            return [];
+
+        } catch (err) {
+            throw err;
+        }
+
+    };
+    
 
 }
 

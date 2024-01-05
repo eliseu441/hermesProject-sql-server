@@ -78,5 +78,19 @@ module.exports = (app) => {
         .catch(err => next(err))
 
     });
+    router.get('/getBioArtists', function (req,res,next) {
+ 
+        app.root.models.ArtGallery.getBioArtists(req.query)
+        .then(result => res.status(result.status ? result.status : 200).json(result))
+        .catch(err => next(err))
+
+    });
+    router.get('/getBCbuilds', function (req,res,next) {
+ 
+        app.root.models.ArtGallery.getBCbuilds(req.query)
+        .then(result => res.status(result.status ? result.status : 200).json(result))
+        .catch(err => next(err))
+
+    });
     return router;
 };

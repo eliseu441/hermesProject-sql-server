@@ -98,6 +98,24 @@ class ArtGallery {
             throw error;
         }
     }
+    async getBioArtists(params) {
+        try {
+            
+            const result = await this.app.root.services.ArtGallery.getBioArtists(params)
+            return result
+        } catch (error) {
+            throw error;
+        }
+    }
+    async getBCbuilds(params) {
+        try {
+            
+            const result = await this.app.root.services.ArtGallery.getBCbuilds(params)
+            return result
+        } catch (error) {
+            throw error;
+        }
+    }
 }
 
 module.exports = (app) => new ArtGallery(app);

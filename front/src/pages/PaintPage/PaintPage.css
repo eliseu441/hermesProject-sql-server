@@ -71,7 +71,6 @@
         perspective: 1200px;
    }
     .book__page {
-        
         width: 50%;
         height: 100%;
         display: grid;
@@ -91,12 +90,16 @@
         background-size: cover;    
    }
     .page-1 {
-        margin-right: -0.5vw;
         cursor: pointer;
         overflow: hidden;
    }
    
     .page-2 {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 59vh!important;
         position: absolute;
         display: block;
         right: 0;

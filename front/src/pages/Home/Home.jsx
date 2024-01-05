@@ -35,10 +35,14 @@ function Home() {
 
 
                     </div>
+                    <Link to="/artists" >
                     <div class="d-flex justify-content-center  mt-5 img1" >
+                   
                         <img src={img_1} alt='' class="img-d-1" width="100" />
+                       
 
                     </div>
+                    </Link>
                     
                     <div class="d-flex justify-content-start  img2" >
                         
@@ -54,7 +58,7 @@ function Home() {
                     </div>
 
                     <h3 class='frame-text-bottom text-frame-1'> <p><img src={moldura_texto} alt='' class="moldura_texto" width="" />ART TYPES</p> </h3>
-                    <h3 class='frame-text-bottom text-frame-2'> <p><img src={moldura_texto} alt='' class="moldura_texto" width="" />EPOCH</p> </h3>
+                    <h3 class='frame-text-bottom text-frame-2'> <p><img src={moldura_texto} alt='' class="moldura_texto" width="" />CENTURY</p> </h3>
                     <h3 class='frame-text-bottom text-frame-3'> <p><img src={moldura_texto} alt='' class="moldura_texto" width="" />ARTISTS</p></h3>
 
 

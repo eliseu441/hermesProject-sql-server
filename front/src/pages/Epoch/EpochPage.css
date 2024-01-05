@@ -289,7 +289,7 @@
         margin: 0;
         background: rgb(174, 118, 34);
         background: linear-gradient(164deg, rgba(174, 118, 34, 1) 15%, rgb(255, 255, 255) 48%, rgba(174, 118, 34, 1) 83%);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         
     }
@@ -300,11 +300,10 @@
     margin: 0;
     background: rgb(174, 118, 34);
     background: linear-gradient(164deg, rgba(174, 118, 34, 1) 15%, rgba(255, 190, 84, 1) 48%, rgba(174, 118, 34, 1) 83%);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
       }
       .img-modal{
-
         padding: 0 50px 0 50px;
       }
       .warning{

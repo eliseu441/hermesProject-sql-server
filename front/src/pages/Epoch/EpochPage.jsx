@@ -140,6 +140,54 @@ function EpochPage() {
         setLoading(false)
 
     }
+    const openBC = async (cent) => {
+        await setChoiceModal('')
+        await setModalImages([])
+        setLoading(true)
+        setCentury(cent)
+
+
+        let warningBuilding = '*if you wanna see more buildings with a full list of them click on the button above on the left'
+        let choice = 'BUILDINGS PAGE'
+        setwarning(warningBuilding)
+        setChoiceModal(choice)
+        let epochOptions = await API.getBCbuilds().then(res => {
+            let concatImages = []
+            let contadorImages = 0
+            let title = ''
+            for (let el of res) {
+
+                console.log(el)
+                if (title !== el.BUILD) {
+                    concatImages = [
+                        ...concatImages[contadorImages] ? concatImages[contadorImages] : concatImages, <div >
+                            <p class='subTitleModal'>{el.BUILD}-{el.YEAR}</p>
+                            <img class='' style={{ borderRadius: "20px" }} src={`/images/buildings/${el.PATH_NAME}`} alt='' />
+                        </div>
+                    ]
+
+                    contadorImages++
+                } else {
+                    concatImages = [
+                        ...concatImages[contadorImages] ? concatImages[contadorImages] : concatImages, <div >
+                            <img class='' style={{ borderRadius: "20px" }} src={`/images/buildings/${el.PATH_NAME}`} alt='' />
+                        </div>
+                    ]
+
+                    contadorImages++
+                }
+                title = el.BUILD
+            }
+            setModalImages(concatImages)
+            console.log(res)
+        }).catch(console.error)
+
+
+
+
+        setLoading(false)
+
+    }
 
 
 
@@ -160,9 +208,6 @@ function EpochPage() {
                     </div>
                     <div class='epoch-options optionsBC'>
 
-
-
-
                         <div class='display-none'>
                             <p>SCULPTURES</p>
 
@@ -172,7 +217,10 @@ function EpochPage() {
                             <p>PAINTINGS</p>
 
                         </div>
-                        <div class='option-content'>
+                        <div 
+                        onClick={e => openBC('XIII')}
+                        data-bs-toggle="modal" data-bs-target="#modalEpoch"
+                        class='option-content'>
                             <p>BUILDINGS</p>
 
                         </div>
@@ -413,12 +461,16 @@ function EpochPage() {
                         : <div class="modal-content">
                             <div class="modal-header">
                                 <div class="d-flex justify-content-between ps-3 col-9">
-                                    <button class="btn button-return" type="submit"><i class="bi bi-arrow-left"></i>{choiceModal}</button>
+                                <Link to={choiceModal == 'SCULPTURES PAGE'? '/sculpPage' :choiceModal == 'BUILDINGS PAGE'? '/buildingsPage': choiceModal == 'PAINTINGS PAGE'?"/paintPage" : '/'} >
+                                    <button class="btn button-return" data-bs-dismiss="modal" aria-label="Close"type="submit"><i class="bi bi-arrow-left"></i>{choiceModal}</button>
+                                    </Link>
                                     <p class="modal-title-epoch " >{century ? century : <></>}</p>
                                     <div></div>
                                 </div>
 
+                                
                                 <button type="button" id='closeModalEpoch' class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                               
                             </div>
 
                             <div class='modal-body p-1 '>
