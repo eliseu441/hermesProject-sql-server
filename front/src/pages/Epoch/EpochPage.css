@@ -7,7 +7,7 @@
         100% { -webkit-transform: translateY(0%); }
     }
     .page-epoch {
-        overflow-x: scroll;
+        overflow-x: hidden;
         width: max-content;
         animation: 3s ease-in slide-epoch;
 

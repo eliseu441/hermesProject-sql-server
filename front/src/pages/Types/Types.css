@@ -166,12 +166,12 @@
     .buildings{
         animation: 7.5s show-icons, 8.2s linear diagonal-slide-buildings;
         border-radius: 1vh;
-        margin-top: 24vh;
+        margin-top: 16vh;
         margin-left: -20vw;
         background: none;
         position: absolute;
         width: 37vh;
-        height: 27vh;
+        height: 40vh;
         font-size: 6vh !important;
     }
     .group-texts div{

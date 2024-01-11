@@ -4,7 +4,7 @@ class pageEdit {
     getTypes = async (params) => {
 
         try {
-            const response = await API.get(`/getVolumeSites`, { params });
+            const response = await API.get(`/getTypesDesc`, { params });
 
             if (response.status === 200) {
                 const data = response.data;

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import './Home.css';
 import img_1 from './img/img_1_teste.png';
 import img_2 from './img/img_2_teste.png';
-import img_3 from './img/img_3_teste.png';
+import img_3 from './img/img_4_teste.png';
 import moldura from './img/moldura_final.png';
 import moldura_texto from './img/moldura_texto.png';
 import pergaminho from './img/pergaminho.png';

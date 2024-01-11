@@ -8,10 +8,10 @@ class ArtGallery {
     constructor(app) {
         this.app = app;
     }
-    async getVolumeSites(params) {
+    async getTypesDesc(params) {
         try {
             
-            const result = await this.app.root.services.ArtGallery.getVolumeSites(params)
+            const result = await this.app.root.services.ArtGallery.getTypesDesc(params)
             return result
         } catch (error) {
             throw error;

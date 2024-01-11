@@ -34,7 +34,7 @@ class ArtGallery {
             throw error;
         }
     }
-    async getVolumeSites(params) {
+    async getTypesDesc(params) {
         try {
             const sql = await dbFIBRA.query(`
             SELECT  [ID]
@@ -553,7 +553,7 @@ class ArtGallery {
             SELECT
             [BUILD]
             ,[COUNTRY]
-            ,[YEAR]
+            ,REPLACE([YEAR], '-', 'BC.') as YEAR
             ,CONCAT( A.FILE_NAME , B.FILE_NAME ) AS PATH_NAME
             ,[DESCRIPTION]
         FROM [ART_GALLERY].[dbo].[TBF_BUILDINGS] AS A

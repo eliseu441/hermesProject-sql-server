@@ -9,27 +9,12 @@
         color: white;
         display: flex;
     }
-    .icons-side{
-        background-image: url("./img/background-icons.jpg");
-        background-size: cover;
-        width: 30vw;
-        height: 100vh;
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        
-
-
-
-    }
+    
     .bio-title{
         font-family: "Cormorant Garamond", serif;;
         font-size: 3vh;
         font-weight: 100;
         text-transform: uppercase;
-        border-top: 2px solid white;
-        border-bottom: 2px solid white;
         margin: 1vh 16vw 0 16vw;
     
 
@@ -54,21 +39,55 @@
         background-image: url("./img/background-bio.jpg");
         background-position-y: 50%;
         background-size: cover;
-        width: 30vw;
         width: 70vw;
         height: 100vh;
         display: inline;
-        justify-content: center;
+        position: absolute;
+        margin-left: 30vw;
+        display: flex;
         text-align: center;
-        align-items: baseline;
+        justify-content: center;
+        align-items: center;
         
 
     }
-    .icon-size{
-        animation: 2s show-up-img;
-        z-index: 3;
+    .icons-side{
+        overflow: hidden;
+        background-image: url("./img/background-icons.jpg");
+        background-size: cover;
+        width: 30vw;
+        height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .icon-sizing{
+        
         width: 23vh;
         cursor: pointer;
+    }
+
+
+    @keyframes slide-icons-side-right {
+        0% { -webkit-transform: translateX(200%); }
+        100% { -webkit-transform: translateX(0%); }
+    }
+    .icons-side-content-right{
+        z-index: 3;
+        animation: 1s ease-in slide-icons-side-right;
+    }
+    @keyframes slide-icons-sideleft {
+        0% { -webkit-transform: translateX(-200%); }
+        100% { -webkit-transform: translateX(0%); }
+    }
+    .icons-side-content-left{
+        z-index: 3;
+        animation: 1s ease-in slide-icons-sideleft;
+    }
+    .bio-content{
+        animation: 1s show-up-img;
+
     }
     .icons-text{
         z-index: 3;
@@ -80,11 +99,12 @@
         font-size: 1.2vw;
         margin-left: -2vw;
     }
-    .next-page{
-
+    .next-page-artist{
+        z-index: 3;
         position: absolute;
         width: 30vw;
         height: 100vh;
+        overflow: hidden;
         display: flex;
         justify-content: space-between;
         align-items:center ;

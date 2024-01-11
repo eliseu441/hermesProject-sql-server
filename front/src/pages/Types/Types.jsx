@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo_alexandre from './img/logo_alexandre.png';
 import logo_planador from './img/logo_planador.png';
 import van_gogh from './img/van_gogh.jpg';
-import cistine_chapel from './img/cistine_chapel.jpg';
+import notre_dame from './img/notre_dame.png';
 import API from '../../services/Infos/Infos'
 import './Types.css';
 function Types() {
@@ -97,7 +97,7 @@ function Types() {
 
                     <img class='inventions' src={logo_planador} style={{ display: stopcube ? "none" : "block", zIndex: indexIcon }} />
                     <img class='art' src={van_gogh} style={{ display: stopcube ? "none" : "block", zIndex: indexIcon }} />
-                    <img class='buildings' src={cistine_chapel} style={{ display: stopcube ? "none" : "block", zIndex: indexIcon }} />
+                    <img class='buildings' src={notre_dame} style={{ display: stopcube ? "none" : "block", zIndex: indexIcon }} />
                 </div>
                 <p class="sub-loading" style={{ display: stopcube ? "flex" : "none" }}>
 

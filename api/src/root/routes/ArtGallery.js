@@ -8,9 +8,9 @@ module.exports = (app) => {
     //------------------------------------------------------------------------------------------
 
 
-    router.get('/getVolumeSites', function (req,res,next) {
+    router.get('/getTypesDesc', function (req,res,next) {
  
-        app.root.models.ArtGallery.getVolumeSites(req.query)
+        app.root.models.ArtGallery.getTypesDesc(req.query)
         .then(result => res.status(result.status ? result.status : 200).json(result))
         .catch(err => next(err))
 

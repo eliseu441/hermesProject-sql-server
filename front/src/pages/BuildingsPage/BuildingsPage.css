@@ -107,6 +107,18 @@
     text-align: center;
     height: 100%;
   }
+  .tabelaLista .page-link{
+    background-color:  rgb(0, 0, 0, 0.7) !important;
+    color: white!important;
+    border: none!important;
+    font-weight: bold;
+  }
+  .active .page-link{
+    color: #BF953F !important;
+    border: 1px solid #BF953F!important;
+    box-shadow: none!important;
+  }
+
 
   .searchTable::placeholder {
     color: rgb(255, 255, 255, 0.7) !important;

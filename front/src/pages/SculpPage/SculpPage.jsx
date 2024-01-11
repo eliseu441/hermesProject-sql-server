@@ -85,7 +85,7 @@ function SculpPage() {
 
                 <div className={sidebar == false ? "header-cesar " : "header-cesar side-expanded-background"}>
                     <p >Sculptures are one of the most realistic ways we have for visualizing someone, just like Cesar bust there have been many others throughout history, below you will see a list of them. Clicking on Cesar bust you you will have access to search filters.</p>
-                    <img src={cesar} width='100' class="logo-header-cesar" onClick={e => setSidebar(!sidebar)} />
+                    <img src={cesar} class="logo-header-cesar" onClick={e => setSidebar(!sidebar)} />
                     <div class='combo-sidebar '>
                         <p >Author:</p>
                         {sidebar == true && loading == false && comboSculp.length > 1 ?

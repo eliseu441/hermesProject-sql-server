@@ -7,12 +7,14 @@ import arrow2 from './img/arrow right.png';
 
 function SculpPage() {
     const [loading, setLoading] = useState(false);
+    const [loadBio, setLoadBio] = useState(false);
     //  const [sidebar, setSidebar] = useState(false);
     const [page, setPage] = useState(0);
     const [data, setData] = useState([]);
     const [bioIcon, setBioIcon] = useState('');
     const [bioTitle, setBioTitle] = useState('');
     const [bioText, setBioText] = useState('');
+    const [side, setSide] = useState(false);
 
     useEffect(() => {
         callPage()
@@ -23,7 +25,10 @@ function SculpPage() {
 
 
     const callPage = async (pageNumber, side) => {
+        await  setData([]) 
         setLoading(true)
+        
+        let way = side == 2 ?  await setSide(true) : await setSide(false)
         pageNumber = side == 1 ? page + 1 : side == 2 ? page - 1 : 0 
         let epochOptions = await API.getBioArtists({ page: pageNumber}).then(res => {
             setData(res)
@@ -39,7 +44,8 @@ function SculpPage() {
         setLoading(false)
     }
     const bioFunction = async (index) => {
-        setLoading(true)
+        
+        await setLoadBio(true)
         
         setBioIcon(data[index].ICON)
         setBioTitle(data[index].NAME +':'+ data[index].BORN +'-'+ data[index].DEATH)
@@ -48,7 +54,7 @@ function SculpPage() {
 
 
 
-        setLoading(false)
+        setLoadBio(false)
     }
 
 
@@ -66,29 +72,40 @@ function SculpPage() {
                 </div>
                 : <></>}
 
-            <div class='next-page'>
-                <img class='arrow-size' src={arrow1} onClick={e=> callPage(page, 1)}alt='' />
-                <img class='arrow-size' src={arrow2} onClick={e=> callPage(page, 2)}alt='' />
+            <div class='next-page-artist'>
+                <img class='arrow-size' src={arrow1} onClick={e=> callPage(page, 2)}alt='' />
+                <img class='arrow-size' src={arrow2} onClick={e=> callPage(page, 1)}alt='' />
 
             </div>
             <div class='page-artists'>
 
                 <div class='icons-side'>
-                    <img class='icon-size' src={data.length > 0 ? `/images/icons/${data[0].ICON}`:''} onClick={e=> bioFunction(0)} alt='' />
+                    {loading == true ? <></>: 
+                    <div class={side == false ? 'icons-side-content-right' : 'icons-side-content-left'}>
+                    <img class='icon-sizing' src={data.length > 0 ? `/images/icons/${data[0].ICON}`:''} onClick={e=> bioFunction(0)} alt='' />
                     <p class='icons-text'>{data.length>0 ? data[0].NAME: ''}</p>
-                    <img class='icon-size' src={data.length > 1 ? `/images/icons/${data[1].ICON}`:''} onClick={e=> bioFunction(1)} alt='' />
+                    <img class='icon-sizing' src={data.length > 1 ? `/images/icons/${data[1].ICON}`:''} onClick={e=> bioFunction(1)} alt='' />
                     <p class='icons-text'>{data.length>1 ? data[1].NAME: ''}</p>
-                    <img class='icon-size' src={data.length > 2 ? `/images/icons/${data[2].ICON}`:''} onClick={e=> bioFunction(2)} alt='' />
+                    <img class='icon-sizing' src={data.length > 2 ? `/images/icons/${data[2].ICON}`:''} onClick={e=> bioFunction(2)} alt='' />
                     <p class='icons-text'>{data.length>2 ? data[2].NAME: ''}</p>
                     <p style={{ color: 'black' }}>{page + 1}</p>
-
+                    </div>
+                    }
+                    
                 </div>
                 <div class='bio-side'>
-                    <img class='icon-size mt-2' src={`/images/icons/${bioIcon}`} alt='' />
+                {loadBio == true ? <></>: 
+                <div class= 'bio-content'>
+
+                    <img class='icon-sizing mt-2' src={`/images/icons/${bioIcon}`} alt='' />
 
                     <p class='bio-title'>{bioTitle}</p>
                     <p class='bio-text'>
                     {bioText}</p>
+
+                    </div>
+
+}
                 </div>
 
 
