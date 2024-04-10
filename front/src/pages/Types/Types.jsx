@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo_alexandre from './img/logo_alexandre.png';
-import logo_planador from './img/logo_planador.png';
-import van_gogh from './img/van_gogh.jpg';
-import notre_dame from './img/notre_dame.png';
+import logo_alexandre from '../../sass/elements/img/types/logo_alexandre.png';
+import logo_planador from '../../sass/elements/img/types/logo_planador.png';
+import van_gogh from '../../sass/elements/img/types/van_gogh.jpg';
+import notre_dame from '../../sass/elements/img/types/notre_dame.png';
 import API from '../../services/Infos/Infos'
-import './Types.css';
 function Types() {
 
     const [stopcube, setStopcube] = useState(true);
@@ -56,7 +55,7 @@ function Types() {
             setTimeout(
                 async function () {
                     setIndexText(3)
-                }, 8500
+                }, 6000
             );
         }
     }
@@ -99,11 +98,6 @@ function Types() {
                     <img class='art' src={van_gogh} style={{ display: stopcube ? "none" : "block", zIndex: indexIcon }} />
                     <img class='buildings' src={notre_dame} style={{ display: stopcube ? "none" : "block", zIndex: indexIcon }} />
                 </div>
-                <p class="sub-loading" style={{ display: stopcube ? "flex" : "none" }}>
-
-
-                    Click on cube to start experience
-                </p>
 
             </div>
 

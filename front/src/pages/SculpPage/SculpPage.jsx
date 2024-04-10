@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import './SculpPage.css';
 import API from '../../services/Infos/Infos'
 import { DropdownList } from 'react-widgets';
 import 'react-widgets/styles.css';
 import { Carousel } from '3d-react-carousal';
-import resized1 from './img/Michellangelo/La Nuit.jpg';
-import resized2 from './img/Michellangelo/madona de bruges resized.png';
-import resized3 from './img/Michellangelo/moses_resized.png';
-import resized4 from './img/Michellangelo/pieta.jpg';
-import cesar from './img/cesar_boust_nobackground.png';
+import cesar from '../../sass/elements/img/sculp/cesar_boust_nobackground.png';
 
 function SculpPage() {
     const [author, setAuthor] = useState("MICHELANGELO");
@@ -21,18 +15,7 @@ function SculpPage() {
 
 
     useEffect(() => {
-        // callApis()
-        /*setSlides([
-            <img src={resized1} alt="1" />,
-            <img src={resized2} alt="2" />,
-            <img src={resized3} alt="3" />,
-            <img src={resized4} alt="4" />
-        ]);*/
         callApis(10, 'MICHELANGELO')
-
-
-
-
     }, []);
 
 
@@ -78,7 +61,8 @@ function SculpPage() {
                     </div>
 
                 </div>
-                : <div>
+                : <div >
+                    <div class='wallpaper-sculp'></div>
 
 
                     <div class='slide-cesar'>
@@ -95,6 +79,7 @@ function SculpPage() {
                                         data={comboSculp ? comboSculp : ['']}
                                         dataKey='ID'
                                         textField='NAME'
+                                        value={author}
                                         onChange={e => callApis(e.ID, e.NAME)}
                                     />
                                     : <></>}

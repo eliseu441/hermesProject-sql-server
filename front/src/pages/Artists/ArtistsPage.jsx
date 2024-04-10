@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import './ArtistsPage.css';
 import API from '../../services/Infos/Infos'
 import arrow1 from './img/arrow left.png';
 import arrow2 from './img/arrow right.png';
@@ -48,7 +46,7 @@ function SculpPage() {
         await setLoadBio(true)
         
         setBioIcon(data[index].ICON)
-        setBioTitle(data[index].NAME +':'+ data[index].BORN +'-'+ data[index].DEATH)
+        setBioTitle(data[index].NAME +': '+ data[index].BORN +' - '+ data[index].DEATH)
         setBioText(data[index].BIO)
 
 
@@ -81,6 +79,7 @@ function SculpPage() {
 
                 <div class='icons-side'>
                     {loading == true ? <></>: 
+                    <>
                     <div class={side == false ? 'icons-side-content-right' : 'icons-side-content-left'}>
                     <img class='icon-sizing' src={data.length > 0 ? `/images/icons/${data[0].ICON}`:''} onClick={e=> bioFunction(0)} alt='' />
                     <p class='icons-text'>{data.length>0 ? data[0].NAME: ''}</p>
@@ -88,8 +87,10 @@ function SculpPage() {
                     <p class='icons-text'>{data.length>1 ? data[1].NAME: ''}</p>
                     <img class='icon-sizing' src={data.length > 2 ? `/images/icons/${data[2].ICON}`:''} onClick={e=> bioFunction(2)} alt='' />
                     <p class='icons-text'>{data.length>2 ? data[2].NAME: ''}</p>
-                    <p style={{ color: 'black' }}>{page + 1}</p>
+                    
                     </div>
+                    <p style={{ color: 'black', fontWeight:'bolder' }}>{page + 1}</p>
+                    </>
                     }
                     
                 </div>

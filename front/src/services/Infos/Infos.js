@@ -191,6 +191,23 @@ class pageEdit {
         }
 
     };
+    getBioArtists2 = async (params) => {
+
+        try {
+            const response = await API.get(`/getBioArtists2`, { params });
+
+            if (response.status === 200) {
+                const data = response.data;
+                return data;
+            }
+
+            return [];
+
+        } catch (err) {
+            throw err;
+        }
+
+    };
     getBCbuilds = async (params) => {
 
         try {

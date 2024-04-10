@@ -25,6 +25,8 @@
     "react-router-dom": "^6.12.1",
     "react-scripts": "^5.0.1",
     "react-widgets": "^5.8.4",
+    "sass": "^1.74.1",
+    "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

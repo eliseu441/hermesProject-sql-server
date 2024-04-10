@@ -1,0 +1,59 @@
+.loader-background {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.8);
+    z-index: 9999999999;
+
+
+}
+
+
+.loader-background p {
+    font-family: "Cormorant Garamond", serif;
+    ;
+    font-size: 3vh;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: white;
+    margin-top: -20vh;
+
+}
+
+@keyframes load {
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        right: 0;
+        left: unset;
+    }
+}
+
+.loader {
+    width: 60vw;
+    height: 1.5vh;
+
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+}
+
+
+.loader::before {
+    content: "";
+    position: absolute;
+    background-color: #0092ca;
+    width: 0%;
+    height: 100%;
+    border-radius: 10px;
+    animation: load 1.5s ease-in-out infinite;
+    box-shadow: #0092ca 0px 2px 29px 0px;
+}
+
+

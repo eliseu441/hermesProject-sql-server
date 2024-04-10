@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from "react";
-import './BuildingsPage.css';
 import API from '../../services/Infos/Infos'
 import 'react-widgets/styles.css';
 import Table from '../../components/bootstrapTable2';
 import colunas from './Utils/colunas';
 import Input from "react-widgets/cjs/Input";
-import imgteste from './img/img4.jpg';
 
 function SculpPage() {
     //loading1 para carregar tabela, 2 para carregar dados da construção
     const [loading, setLoading] = useState(0);
-    const [comboSculp, setComboSculp] = useState(false);
     const [description, setDescription] = useState('');
     const [title, setTitle] = useState('');
-    const [slides, setSlides] = useState(false);
     const [dataBuildings, setDataBuildings] = useState([]);
     const [changeModal, setChangeModal] = useState(false);
     const [imagesModal, setImagesModal] = useState(false);

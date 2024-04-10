@@ -1,0 +1,958 @@
+
+
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+@media (min-width: 600px) and (min-height: 400px) {
+    
+    .page-sculp {
+        height: 100vh;
+        width: 100vw;   
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .wallpaper-sculp{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-image: url('./img/sculp/wallpaper_sculp.jpg');
+        background-size: contain;
+        z-index:0;
+    }
+.carousel{
+    
+    height: 50vh;
+    width: 100vw;
+}
+
+.slider-right {
+    display: block;
+  //      background-image: url('./img/sculp/arrow carousel left.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 30vw;
+        margin-left: -20vw!important;
+        background-position-y: 55%;   
+        opacity: 0.7;
+        rotate: 180deg;
+}
+.slider-right div{
+    display: none;
+}
+.fa-arrow-right{
+    display: none;
+}
+.slider-left { 
+    
+    display: block;
+//        background-image: url('./img/sculp/arrow carousel left.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 30vw;
+        margin-right: -20vw!important;
+        background-position-y: 45%;   
+        opacity: 0.7;
+}
+.slider-left div{ 
+    
+    display: none;
+}
+    .logo-header-cesar {
+        max-height: 27vh;
+        height: auto;
+        width: auto;
+        display: block;
+        z-index: 1;
+        cursor: pointer;
+    }
+    body {
+        position: relative;
+        z-index: -1;
+        overflow-y: visible;
+        overflow-x: hidden;
+    }
+    .side-expanded-background {
+        z-index: 1;
+        width: 174vw;
+        height: 23vh;
+        margin-right: -114.5vw;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        position: absolute;
+        background-image: url("./img/sculp/header_cesar_black.png");
+        background-size: 200vh;
+        
+        background-repeat: no-repeat;
+        background-position-y: 70%;
+        background-position-x: 86vw;
+        position: absolute;
+
+        animation: 1s linear slide-sidebar-content-cesar;
+        z-index: 1;
+        margin-left: -74vw !important;
+    }
+    .header-cesar {
+        background-color: black;
+        border-bottom: 2px solid grey;
+        z-index: 1;
+        width: 174vw;
+        height: 23vh;
+        margin-right: -114.5vw;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        position: absolute;
+        background-image: url("./img/sculp/header_cesar_black.png");
+        background-size: 200vh;
+        
+        background-repeat: no-repeat;
+        background-position-y: 70%;
+        background-position-x: 86vw;
+        position: absolute;
+
+        animation: 1s linear reverse-sidebar-content-cesar;
+
+    }
+    @keyframes slide-sidebar-content-cesar {
+        0% {
+            right: 40vw;
+            /*76vw*/
+        }
+
+        100% {
+            right: 115vw;
+            
+
+        }
+    }
+    @keyframes reverse-sidebar-content-cesar {
+        0% {
+            right: 110vw;
+            /*76vw*/
+        }
+
+        100% {
+            right: 40vw;
+            
+
+        }
+    }
+
+    .side-expanded-background {
+        animation: 1s linear slide-sidebar-content-cesar;
+        z-index: 1;
+        margin-left: -74vw !important;
+    }
+   
+.culpTitle{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    color: #fff;
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700 !important;  
+    font-size: 4vh;
+    letter-spacing: 1.1px;
+    background: rgb(255,255,255);
+    background: linear-gradient(121deg, rgba(255,255,255,1) 0%, rgba(168,168,168,1) 46%, rgba(255,255,255,1) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: -1px -1px 8px rgba(255, 255, 255, 0.3);
+
+}
+.header-cesar p {
+    width: 75vw;
+    letter-spacing: -0.7px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-style: italic;
+    background: linear-gradient(121deg, rgb(235, 196, 6) 0%, rgba(255, 162, 0, 1) 80%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: -1px -1px 8px rgba(255, 255, 255, 0.5);
+    font-size: 3.5vh;
+    padding: 4vh;
+
+}
+//types
+.fixed-cube {
+        overflow: hidden;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        background-image: url("./img/types/wallpaper_hermes.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;    
+        width: 100vw;
+        height: 100vh;
+    }
+
+  
+    .loading {
+        animation: 3s show-cube;
+        opacity: 1;
+        cursor: pointer;
+        position: absolute;
+        z-index: 1;
+        width: 45vh;
+        height: 45vh;
+        perspective: 1000px;
+        margin-left: 0;
+        margin-top: 15vh;
+
+    }
+
+    .cube {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: rotate 10s infinite linear;
+        
+    }
+    
+  
+    @keyframes diagonal-slide-sculp {
+        0% {
+          left: 20vw;
+          top: 13vh;
+        }
+        80% {
+            left: 20vw;
+            top: 13vh;
+          }
+        100% {
+          left: 0;
+          top: 0;
+        }
+      }
+      @keyframes show-icons {
+        0%    { opacity: 0; }
+        10%    { opacity: 0; }        
+        100%    { opacity: 1; }
+    }
+    .sculp{
+        animation: 3s linear diagonal-slide-sculp;
+        margin-top: -55vh;
+        margin-left: -20vw;
+        background: none;
+        position: relative;
+        z-index: 1;
+        width: 35vh;
+        height: 35vh;
+        font-size: 6vh !important;
+
+    }
+    @keyframes show-icons {
+        0%    { opacity: 0; }
+        90%    { opacity: 0; }        
+        100%    { opacity: 1; }
+    }
+    @keyframes diagonal-slide-invenction {
+        0% {
+          left: -25vw;
+          top: 35vh;
+        }
+        90% {
+            left: -25vw;
+            top: 35vh;
+          }
+        100% {
+          left: 0;
+          top: 25vh;
+        }
+      }
+    .inventions {   
+        animation: 3s show-icons, 3.7s linear diagonal-slide-invenction;
+        margin-top: -35vh;
+        margin-left: 23vw;
+        background: none;
+        position: absolute;
+        z-index: 1;
+        width: 55vh;
+        height: 35vh;
+        font-size: 6vh !important;
+    }
+    @keyframes diagonal-slide-art {
+        0% {
+          left: -25vw;
+          top: -5vh;
+        }
+        90% {
+            left: -25vw;
+            top: -5vh;
+          }
+        100% {
+          left: 0;
+          top: 25vh;
+        }
+      }
+
+      .art {   
+        animation: 4s show-icons, 5s linear diagonal-slide-art;
+        border: 20px groove rgb(158, 92, 44, 0.7);
+        margin-top: 24vh;
+        margin-left: 26vw;
+        background: none;
+        position: absolute;
+        width: 37vh;
+        height: 27vh;
+        font-size: 6vh !important;
+    }
+    @keyframes diagonal-slide-buildings {
+        0% {
+          left: 25vw;
+          top: -5vh;
+        }
+        95% {
+            left: 25vw;
+            top: -5vh;
+          }
+        100% {
+          left: 0;
+          top: 25vh;
+        }
+      }
+    .buildings{
+        animation: 5s show-icons, 5.7s linear diagonal-slide-buildings;
+        border-radius: 1vh;
+        margin-top: 16vh;
+        margin-left: -20vw;
+        background: none;
+        position: absolute;
+        width: 37vh;
+        height: 40vh;
+        font-size: 6vh !important;
+    }
+    .group-texts div{
+        color: none;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 700 !important;  
+        font-size: 2.7vh;
+        letter-spacing: 1.1px;
+        padding-right: 5vw;
+        padding-left: 5vw;
+
+    }
+    .group-texts div:hover{
+        color: white;
+        cursor: pointer;
+        border-radius: 0;
+        border: 1vh groove rgba(255, 255, 255, 0.7);
+        background-color: rgb(0, 0, 0, 0.7);
+        animation: 0.5s show-up-img;
+        opacity:1
+
+    }
+    .sculp-text{
+        
+        width: 50%; 
+        height: 50%;
+        margin-left: -50%;
+        position: absolute;
+       
+    }
+    
+    .art-text{
+
+        width: 50%;
+        height: 50%;
+        margin-right: -50%;   
+        margin-top: 50vh;    
+        position: absolute;
+       
+    }
+    .invention-text{
+        width: 50%;
+        height: 50%;
+        margin-right: -50%;
+        position: absolute;
+       
+    }
+    .buildings-text{
+
+        width: 50%;
+        height: 50%;
+        margin-left: -50vw;
+        margin-top: 50vh;   
+        position: absolute;
+        
+    }
+    .group-text{
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    .cube-stopped { 
+        animation-fill-mode: forwards;
+        animation-play-state: paused;
+    }
+
+    .side {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .front {
+        transform: translateZ(22.5vh);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("./img/types/cesar_cube.jpg");
+    }
+
+    .cube-stopped .front {
+
+        animation: 2s ease-out 0s 1 slide-front, 2s hide-img-type;
+        opacity: 0;
+
+
+    }
+
+    .back {
+        
+        background: black;
+        transform: translateZ(-22.5vh) rotateY(180deg);
+    }
+
+    .cube-stopped .back {
+
+        animation: 2s ease-out 0s 1 slide-back, 2s hide-img-type;
+        opacity: 0;
+    }
+
+    .top {
+
+        transform: rotateX(90deg) translateZ(22.5vh);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("./img/types/vitruvian_cube.jpg");
+
+    }
+
+    .cube-stopped .top {
+
+        animation:2s ease-out 0s 1 slide-top, 2s hide-img-type;
+        opacity: 0;
+
+
+    }
+
+    .bottom {
+        transform: rotateX(-90deg) translateZ(22.5vh);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("./img/types/monalisa_cube.jpg");
+    }
+
+    .cube-stopped .bottom {
+
+        animation: 2s ease-out 0s 1 slide-bottom, 2s hide-img-type;
+        opacity: 0;
+
+
+    }
+
+    .left {
+        transform: rotateY(-90deg) translateZ(22.5vh);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("./img/types/cube_Faust _and_Lilith.png");
+    }
+
+    .cube-stopped .left {
+
+        animation: 2s ease-out 0s 1 slide-left, 2s hide-img-type;
+        opacity: 0;
+
+
+    }
+
+    .right {
+        transform: rotateY(90deg) translateZ(22.5vh);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("./img/types/cube_os_retirantes.jpg");
+    }
+
+    .cube-stopped .right {
+
+        animation: 2 ease-out 0s 1 slide-right, 2s hide-img-type;
+        opacity: 0;
+
+
+    }
+    @keyframes hide-img-type {
+        0%    { opacity: 1; }
+        100%    { opacity: 0.1; }
+    }
+    @keyframes show-cube {
+        0%    { opacity: 0; }
+        10%    { opacity: 0; }        
+        100%    { opacity: 1; }
+    }
+    @keyframes rotate {
+        from {
+            transform: rotateY(40deg) rotateX(40deg);
+        }
+
+        to {
+            transform: rotateY(400deg) rotateX(400deg);
+        }
+    }
+
+    @keyframes rotateReverse {
+        from {
+            transform: rotateY(0deg) rotateX(0deg);
+        }
+
+        to {
+            transform: rotateY(0deg) rotateX(0deg);
+        }
+    }
+
+    @keyframes slide-front {
+        0% {
+            -webkit-transform: translateZ(22.5vh);
+        }
+        80% {
+            -webkit-transform: translateZ(22.5vh);
+        }
+
+        100% {
+            -webkit-transform: translateZ(100vh);
+        }
+    }
+
+    @keyframes slide-back {
+        0% {
+            -webkit-transform: translateZ(-22.5vh) rotateY(180deg);
+        }
+        80% {
+            -webkit-transform: translateZ(-22.5vh) rotateY(180deg);
+        }
+
+        100% {
+            -webkit-transform: rotateY(180deg) translateZ(300vh);
+        }
+    }
+
+    @keyframes slide-top {
+        0% {
+            -webkit-transform: rotateX(90deg) translateZ(22.5vh);
+        }
+        80% {
+            -webkit-transform: rotateX(90deg) translateZ(22.5vh);
+        }
+
+        100% {
+            -webkit-transform: rotateX(90deg) translateZ(300vh);
+        }
+    }
+
+    @keyframes slide-bottom {
+        0% {
+            -webkit-transform: rotateX(-90deg) translateZ(22.5vh);
+        }
+        80% {
+            -webkit-transform: rotateX(-90deg) translateZ(22.5vh);
+        }
+
+        100% {
+            -webkit-transform: rotateX(-90deg) translateZ(300vh);
+        }
+    }
+
+    @keyframes slide-left {
+        0% {
+            -webkit-transform: rotateY(-90deg) translateZ(22.5vh);
+        }
+        80% {
+            -webkit-transform: rotateY(-90deg) translateZ(22.5vh);
+        }
+
+        100% {
+            -webkit-transform: rotateY(-90deg) translateZ(300vh);
+        }
+    }
+
+    @keyframes slide-right {
+        0% {
+            -webkit-transform: rotateY(90deg) translateZ(22.5vh);
+        }
+        80% {
+            -webkit-transform: rotateY(90deg) translateZ(22.5vh);
+        }
+
+        100% {
+            -webkit-transform: rotateY(90deg) translateZ(300vh);
+        }
+    }
+
+
+    .logo-sidebar-authors {
+        max-height: 20vh;
+        height: auto;
+        width: auto;
+        display: block;
+        margin-right: -87vw;
+        position: absolute;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    @keyframes slide-sidebar-logo {
+        0% {
+            right: 50vw;
+        }
+
+        100% {
+            right: 70vw;
+
+        }
+    }
+
+    .logo-expanded {
+        animation: 0.3s linear slide-sidebar-logo;
+        margin-right: -50vw;
+    }
+
+
+    @keyframes slide-sidebar-content {
+        0% {
+            right: 57vw;
+        }
+
+        100% {
+            right: 76vw;
+
+        }
+    }
+
+    @keyframes slide-sidebar-content-background {
+        0% {
+            right: 57vw;
+        }
+
+        100% {
+            right: 76vw;
+
+        }
+    }
+
+    .side-expanded {
+        animation: 0.3s linear slide-sidebar-content;
+        z-index: 1;
+        margin-right: -77vw !important;
+    }
+
+    .side-expanded-background-paint {
+        z-index: 1;
+        animation: 0.3s linear slide-sidebar-content;
+
+        margin-left: -37.5vw !important;
+    }
+
+    .sidebar-authors-border {
+        clip-path: polygon(5% 0, 100% 0%, 100% 100%, 5% 100%, 0% 50%);
+        width: 25vw;
+        margin-right: -114vw;
+        height: 100vh;
+        height: 100%;
+        position: absolute;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: black;
+
+
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+    }
+
+    .sidebar-authors {
+        clip-path: polygon(5% 0, 100% 0%, 100% 100%, 5% 100%, 0% 50%);
+        width: 25vw;
+        margin-right: -114.5vw;
+        height: 100vh;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+
+        background-image: url("./img/paint/wallpaper-authors.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+    }
+
+    
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .choose-author {
+        margin-top: 20vh;
+        background-color: rgb(245, 245, 245, 0.5);
+        height: 55vh;
+        width: 18vw;
+        border-radius: 10px;
+        padding: 6%;
+    }
+
+    .choose-author p {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 2vh;
+        font-weight: 100;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: black;
+        display: flex;
+        justify-content: center;
+    }
+
+    @keyframes scroll {
+        100% {
+          background-position-y: 0%;
+        }
+    
+        100% {
+          background-position-y: 400%;
+        }
+      }
+    
+      .page-build {
+        width: 100vw;
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        background: url("./img/build/sistine chapel.jpg");
+        background-position-x: 54vw;
+        justify-content: center;
+        align-items: center;
+        animation: scroll 100s linear infinite;
+      }
+    
+      #modalBuildings .modal-dialog {
+        max-width: 90vw !important;
+        max-height: 70vh !important;
+    
+      }
+    
+      #modalBuildings .modal-content {
+        height: 100% !important;
+      }
+    
+      .information {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: max-content;
+        background-size: contain;
+        border: none;
+        width: min-content;
+        font-size: 3.3vh;
+        padding-top: 2px;
+        background: rgb(252, 246, 186);
+        background: linear-gradient(112.1deg, rgb(88, 103, 153) 11.4%, rgb(36, 50, 95) 70.2%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+      }
+    
+
+
+      @keyframes show-up-img {
+        0% {
+          opacity: 0;
+        }
+    
+        50% {
+          opacity: 0;
+        }
+    
+        100% {
+          opacity: 1;
+        }
+      }
+    
+      .modal-content .modal-body.background {
+        background-image: url("./img/build/back_modal.png");
+        opacity: 1;
+        background-size: 101%;
+        background-repeat: no-repeat;
+        background-position-y: 100%;
+        animation: 2s show-up-img;
+      }
+      
+    
+      .build-information {
+        display: flex;
+        justify-content: center;
+        background: rgb(249, 201, 130);
+        background: linear-gradient(164deg, rgba(249, 201, 130, 1) 15%, rgba(250, 156, 23, 1) 48%, rgba(249, 201, 130, 1) 83%);
+        padding: 5px;
+        margin: 1vh 8vw 1vh 8vw;
+        border-radius: 10px;
+        height: max-content;
+        letter-spacing: -0.7px;
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        font-size: 4vh;
+        color: black;
+        -webkit-box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.75);
+      }
+    
+      .display-none {
+        display: none!important;
+      }
+      .img-modal img{
+        animation: 1s show-up-img;
+        width: 100%;
+        margin-top: 1vh;
+      }
+    
+      .page-artists {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        color: white;
+        display: flex;
+    }
+    
+    .bio-title{
+        font-family: "Cormorant Garamond", serif;;
+        font-size: 3vh;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin: 1vh 16vw 0 16vw;
+    
+
+    }
+    
+    .bio-text{
+        font-family: "Cormorant Garamond", serif;;
+        font-size: 4vh;
+        font-weight: 100;
+        margin: 4vw 3vw 0 3vw;
+
+
+
+
+
+    }
+
+
+
+    
+    .bio-side{
+        background-image: url("./img/artist/background-bio.jpg");
+        background-position-y: 50%;
+        background-size: cover;
+        width: 70vw;
+        height: 100vh;
+        display: inline;
+        position: absolute;
+        margin-left: 30vw;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        
+
+    }
+    .icons-side{
+        overflow: hidden;
+        background-image: url("./img/artist/background-icons.jpg");
+        background-size: cover;
+        width: 30vw;
+        height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .icon-sizing{
+        
+        width: 23vh;
+        cursor: pointer;
+    }
+
+
+    @keyframes slide-icons-side-right {
+        0% { -webkit-transform: translateX(200%); }
+        100% { -webkit-transform: translateX(0%); }
+    }
+    .icons-side-content-right{
+        z-index: 3;
+        animation: 1s ease-in slide-icons-side-right;
+    }
+    @keyframes slide-icons-sideleft {
+        0% { -webkit-transform: translateX(-200%); }
+        100% { -webkit-transform: translateX(0%); }
+    }
+    .icons-side-content-left{
+        z-index: 3;
+        animation: 1s ease-in slide-icons-sideleft;
+    }
+    .bio-content{
+        animation: 1s show-up-img;
+
+    }
+    .icons-text{
+        z-index: 3;
+        color: black;
+        font-weight: bolder;
+        padding: 0;
+        margin: 0;
+        font-family: "Cormorant Garamond", serif;;
+        font-size: 1.2vw;
+        margin-left: -2vw;
+    }
+    .next-page-artist{
+        z-index: 3;
+        position: absolute;
+        width: 30vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items:center ;
+
+    }
+    .arrow-size{
+        padding-top: 100%;
+        padding-bottom: 100%;
+        width: 2vw;
+        cursor:pointer;
+    }
+
+
+
+  
+}
