@@ -61,7 +61,27 @@
         overflow-y: visible;
         overflow-x: hidden;
     }
+    .side-expanded-background {
+        z-index: 1;
+        width: 174vw;
+        height: 23vh;
+        margin-right: -114.5vw;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        position: absolute;
+        background-image: url("./img/header_cesar_black.png");
+        background-size: 200vh;
+        
+        background-repeat: no-repeat;
+        background-position-y: 70%;
+        background-position-x: 86vw;
+        position: absolute;
 
+        animation: 1s linear slide-sidebar-content-cesar;
+        z-index: 1;
+        margin-left: -74vw !important;
+    }
     .header-cesar {
         z-index: 1;
         width: 174vw;
@@ -78,6 +98,8 @@
         background-position-y: 70%;
         background-position-x: 86vw;
         position: absolute;
+
+        animation: 1s linear reverse-sidebar-content-cesar;
 
     }
     .combo-sidebar{
@@ -122,12 +144,24 @@
 
     @keyframes slide-sidebar-content-cesar {
         0% {
-            right: 76vw;
+            right: 40vw;
             /*76vw*/
         }
 
         100% {
-            right: 150vw;
+            right: 115vw;
+            
+
+        }
+    }
+    @keyframes reverse-sidebar-content-cesar {
+        0% {
+            right: 110vw;
+            /*76vw*/
+        }
+
+        100% {
+            right: 40vw;
             
 
         }

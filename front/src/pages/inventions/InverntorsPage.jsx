@@ -31,15 +31,17 @@ function SculpPage() {
                 console.log(el.FILE_NAME)
                 layers = [
                     ...layers[contadorLayer] ? layers[contadorLayer] : layers, 
-                    <div class='inventor-layer'  style={{
+                    <div 
+                    data-aos="zoom-in" data-aos-duration="1500" data-aos-delay={`${el.ID}00`}
+                    class='inventor-layer'  style={{
                         backgroundImage: `url(/images/${el.FILE_NAME}/wallpaper_final.png)`,
                         backgroundSize: '101%',
                         backgroundRepeat: 'no-repeat',
                         backgroundPositionY: '100%',
-                        animation: `${el.ID}s ease-in slide-layers`
+                        overflow:'hidden'
                         }}>
                     <img src={`/images/${el.FILE_NAME}/logo_final.png`} class='logo-inventor' />
-                    <p class='description-iventors'>{el.DESCRIPTION}</p>
+                    <p class='description-iventors' >{el.DESCRIPTION}</p>
 
                     </div>
                     
@@ -76,9 +78,9 @@ function SculpPage() {
 
             <div class='page-inverntors row'>
 
-                <div class='inventor-layer-intro'>
+                <div class='inventor-layer-intro' data-aos="zoom-in" data-aos-duration="1500">
 
-                    <p class='intro-iventors'>Humanity's inventions, like the barometer, have played a crucial role in our progress. The barometer, measuring atmospheric pressure, revolutionized weather forecasting and navigation. Such innovations showcase our ability to understand and adapt to the world around us, below you can see these and other inventions of human history</p>
+                    <p class='intro-iventors'  >Humanity's inventions, like the barometer, have played a crucial role in our progress. The barometer, measuring atmospheric pressure, revolutionized weather forecasting and navigation. Such innovations showcase our ability to understand and adapt to the world around us, below you can see these and other inventions of human history</p>
 
                 </div>
                 {layers && loading == false ?

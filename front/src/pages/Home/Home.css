@@ -13,19 +13,29 @@
         overflow: hidden;
     }
     .info-intro{
-        overflow: none;
+        position: fixed;
+        z-index: 100!important;
+        overflow: visible!important;
         clip-path: polygon(1% 1%, 99% 0, 99% 99%, 1% 99%);
-        position: relative;
-        margin-left: 0vw;
+        margin-left: -25vw;
         height: 95vh;
         width: 50vw;
         background: none;
         margin-top: -85vh;
         cursor: pointer;
+        animation: 1s ease-out 0s 1 slide-down ;
         
          
     }
     .expandido{
+        overflow: none;
+        clip-path: polygon(1% 1%, 99% 0, 99% 99%, 1% 99%);
+        position: fixed;
+        margin-left: -25vw;
+        height: 95vh;
+        width: 50vw;
+        background: none;
+
         margin-top: -100vh;
         animation: 1s ease-out 0s 1 slide-up;
         cursor: pointer;
@@ -55,12 +65,17 @@
         0%{ -webkit-transform: translateY(-50%); }
         100%{ -webkit-transform: translateY(0%); }
     }
+    @keyframes slide-down {
+        0%{ -webkit-transform: translateY(40%); }
+        100%{ -webkit-transform: translateY(0%); }
+    }
         
     @keyframes show-up-img {
         0%    { opacity: 0; }
         50%    { opacity: 0; }
         100%  { opacity: 1; }
     }
+    
 
     body {
         zoom: 1 ;
@@ -331,7 +346,6 @@
 
 @media (max-width: 600px) or (max-height:400px) {
     .page-home {
-
         display: none;
 
     }

@@ -311,9 +311,11 @@ z-index: 2;
     z-index: 1;
     margin-right: -77vw!important;
 }
-.side-expanded-background{
-    z-index: 0;
-    margin-right: -150.5vw!important;
+.side-expanded-background-paint{
+    z-index: 1;
+    animation: 0.3s linear slide-sidebar-content;
+
+    margin-left: -37.5vw !important;
 }
 .sidebar-authors-border{
     clip-path: polygon(5% 0, 100% 0%, 100% 100%, 5% 100%, 0% 50%);

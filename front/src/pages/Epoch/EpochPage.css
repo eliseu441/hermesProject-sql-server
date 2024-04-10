@@ -12,7 +12,9 @@
         animation: 3s ease-in slide-epoch;
 
     }
-
+    .loader-century .page_loader path {
+        stroke: #ff9a3c!important;
+    }
     .epoch-layer {
         clip-path: polygon(25% 25%, 50% 0, 75% 25%, 100% 0, 100% 75%, 75% 100%, 50% 75%, 25% 100%, 0 75%, 0 0);
         width: 100vw;

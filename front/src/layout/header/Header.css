@@ -28,14 +28,8 @@
         
          
     }
-    .expandido{
-        margin-top: -100vh;
-        animation: 1s ease-out 0s 1 slide-up;
-        cursor: pointer;
-         
-    }
     .hide-intro{
-        padding-top: 2vh;
+        padding-top: 3vh;
         background-color: rgb(255, 255, 255, 0.07);
         border-radius: 10%;
         width: 32vw;

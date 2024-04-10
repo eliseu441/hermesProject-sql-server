@@ -1,1 +1,6 @@
 node_modules
+portal
+build
+.env
+.env.development
+env

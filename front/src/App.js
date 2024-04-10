@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link, Routes, HashRouter } from 'react-router-dom';
 import './App.css';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -11,14 +11,21 @@ import PaintPage from './pages/PaintPage/PaintPage'
 import SideNavBar from './layout/sidebar/SideNavBar';
 import SculpPage from './pages/SculpPage/SculpPage.jsx';
 import BuildingsPage from './pages/BuildingsPage/BuildingsPage.jsx'
-import InverntorsPage from './pages/Inventions/InverntorsPage.jsx'
+import InverntorsPage from './pages/inventions/InverntorsPage.jsx'
 import EpochPage from './pages/Epoch/EpochPage.jsx'
 import ArtistsPage from './pages/Artists/ArtistsPage.jsx'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 
 function App() {
+  useEffect(() => {
+
+    Aos.init({ once: true });
+}, []);
+
   return (
-    <Router>
+    <HashRouter>
       <Header/>
       <SideNavBar/>
       <Routes>
@@ -32,7 +39,7 @@ function App() {
           <Route path="/epoch" element={<EpochPage />} />
           <Route path="/artists" element={<ArtistsPage />} />
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import './EpochPage.css';
 import API from '../../services/Infos/Infos'
 import 'react-widgets/styles.css';
+import Preloader from "../../layout/preLoader/PreLoader";
 
 function EpochPage() {
     const [loading, setLoading] = useState(false);
@@ -12,17 +13,13 @@ function EpochPage() {
     const [warning, setwarning] = useState('');
     const [century, setCentury] = useState('');
     const [choiceModal, setChoiceModal] = useState(0);
-
-
-
-
+    const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
-
-
-
-
         setOptions()
-
+       // callApis()
+       setTimeout(() => {
+        setIsLoading(false);
+      }, 3000);
 
 
 
@@ -196,7 +193,8 @@ function EpochPage() {
     return (
         <>
 
-
+{isLoading ? <div class='loader-century'> <Preloader /> </div>: (
+<div>
 
             <div class='page-epoch '>
                 <div class='epoch-layer '>
@@ -498,7 +496,9 @@ function EpochPage() {
 
                 <h4>Atualmente a aplicação é focara para desktop, portanto ainda não ha portabilidade menor que 600px de largura por 400px de altura, um tamanho menos implicaria na perca da qualidade das imagens e experiencias.</h4>
             </div>
-
+            </div>
+)
+}
         </>
     )
 }

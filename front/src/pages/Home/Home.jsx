@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import './Home.css';
 import img_1 from './img/img_1_teste.png';
@@ -7,23 +7,39 @@ import img_3 from './img/img_4_teste.png';
 import moldura from './img/moldura_final.png';
 import moldura_texto from './img/moldura_texto.png';
 import pergaminho from './img/pergaminho.png';
+import API from '../../services/Infos/Infos'
+import Preloader from "../../layout/preLoader/PreLoader";
+
 function Home() {
 
     const [expandIntro, setExpandIntro] = useState(true);
+    
+    const [isLoading, setIsLoading] = useState(true);
+    useEffect(() => {
+       setTimeout(() => {
+        setIsLoading(false);
+      }, 3000);
 
+
+
+    }, []);
 
 
 
 
     return (
         <>
-            <div className="page-home">
-                <div class="header">
+         {isLoading ? <Preloader /> : (
+            <div>
+
+            <div className="page-home" data-aos="zoom-in" >
+                <div class="header " >
                     <div class='hide-intro' onClick={e => setExpandIntro(!expandIntro)} style={{ display: expandIntro == true ? 'none' : 'flex' }}>
                         <p>This project was designed as an experience for people who wanted to see and understand a little more about the great painters, buildings and sculptors who have passed through our history, the navigation is a tour guided by the options you choose, so i recommend that you select other paths from this home page again after find the end.</p>
                     </div>
-
-                    <img src={pergaminho} onClick={e => setExpandIntro(!expandIntro)} class={expandIntro ? 'info-intro' : 'info-intro expandido'} />
+                    <img src={pergaminho}  onClick={e => setExpandIntro(!expandIntro)} class={expandIntro ? 'info-intro' : ' expandido'} />
+                    
+               
                 </div>
 
                 <div className="row frame-intro ">
@@ -69,7 +85,9 @@ function Home() {
 
                 <h4>Para melhor entender a construção do projeto o conteudo foi feito primeiramente exclusivamente para desktop/tablets por levar em conta as complexidades e detalhes que cada obra de arte pode conter.</h4>
             </div>
-
+            </div>
+ )
+}
         </>
     )
 }

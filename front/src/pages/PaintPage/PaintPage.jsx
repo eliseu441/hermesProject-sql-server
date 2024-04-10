@@ -5,13 +5,6 @@ import API from '../../services/Infos/Infos'
 import { DropdownList } from 'react-widgets';
 import 'react-widgets/styles.css';
 
-import dore1 from './img/gus_dore/A queda dos anjos 1674.jpg';
-import dore2 from './img/gus_dore/Confusion_of_Tongues 1868.png';
-import dore3 from './img/gus_dore/Don Quixote de Cervantes.jpg';
-import dore4 from './img/gus_dore/inferno_canto_21-1861.jpg';
-import dore5 from './img/gus_dore/paradiso canto 1868.jpg';
-import dore6 from './img/gus_dore/The Holy Bible_Plate I The_Deluge.jpg';
-import dore7 from './img/SandroBotticelli/Primavera.jpg';
 import napoleon from './img/sidebar_napoleao.png';
 function PaintPage() {
     const [page, setPage] = useState(1);
@@ -137,7 +130,7 @@ function PaintPage() {
                 <img src={napoleon} width='100' class={sidebar == false ? "logo-sidebar-authors" : "logo-sidebar-authors logo-expanded"} onClick={e => setSidebar(!sidebar)} />
 
                 
-                <div className={sidebar == false ? "sidebar-authors-border" : "sidebar-authors-border side-expanded-background"}>
+                <div className={sidebar == false ? "sidebar-authors-border" : "sidebar-authors-border side-expanded-background-paint"}>
                 </div>
                 <div className={sidebar == false ? "sidebar-authors" : "sidebar-authors side-expanded"}>
                     <div class='choose-author'>

@@ -78,50 +78,54 @@ function SculpPage() {
                     </div>
 
                 </div>
-                : <></>}
-
-            <div class='slide-cesar'>
+                : <div>
 
 
-                <div className={sidebar == false ? "header-cesar " : "header-cesar side-expanded-background"}>
-                    <p >Sculptures are one of the most realistic ways we have for visualizing someone, just like Cesar bust there have been many others throughout history, below you will see a list of them. Clicking on Cesar bust you you will have access to search filters.</p>
-                    <img src={cesar} class="logo-header-cesar" onClick={e => setSidebar(!sidebar)} />
-                    <div class='combo-sidebar '>
-                        <p >Author:</p>
-                        {sidebar == true && loading == false && comboSculp.length > 1 ?
-                            <DropdownList
-                                defaultValue=""
-                                data={comboSculp ? comboSculp : ['']}
-                                dataKey='ID'
-                                textField='NAME'
-                                onChange={e => callApis(e.ID, e.NAME)}
-                            />
-                            : <></>}
-                    </div>
-                </div>
+                    <div class='slide-cesar'>
 
-            </div>
-            <div class='page-sculp'>
-                <div class='carousel'>
 
-                
-                    {slides && loading == false ?
-                    
-                        <div >
-                            <p class='culpTitle'>{author}</p>
-
-                            <Carousel slides={slides} autoplay={false} interval={5000} />
+                        <div className={sidebar == false ? "header-cesar " : "header-cesar side-expanded-background"} >
+                            <p data-aos="fade-left" data-aos-duration="2000" >Sculptures are one of the most realistic ways we have for visualizing someone, just like Cesar bust there have been many others throughout history, below you will see a list of them. Clicking on Cesar bust you you will have access to search filters.</p>
+                            <img src={cesar} class="logo-header-cesar"  onClick={e => setSidebar(!sidebar)} data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1500"/>
+                            <div class='combo-sidebar '>
+                                <p >Author:</p>
+                                {sidebar == true && loading == false && comboSculp.length > 1 ?
+                                    <DropdownList
+                                        defaultValue=""
+                                        data={comboSculp ? comboSculp : ['']}
+                                        dataKey='ID'
+                                        textField='NAME'
+                                        onChange={e => callApis(e.ID, e.NAME)}
+                                    />
+                                    : <></>}
+                            </div>
                         </div>
-                        : <></>}
-                </div>
-            </div>
+
+                    </div>
+                    <div class='page-sculp'>
+                        <div class='carousel' data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1500">
+
+
+                            {slides && loading == false ?
+
+                                <div  >
+                                    <p class='culpTitle'>{author}</p>
+
+                                    <Carousel slides={slides} autoplay={false} interval={5000} />
+                                </div>
+                                : <></>}
+                        </div>
+                    </div>
 
 
 
-            <div class="aviso">
+                    <div class="aviso">
 
-                <h4>Atualmente a aplicação é focara para desktop, portanto ainda não ha portabilidade menor que 600px de largura por 400px de altura, um tamanho menos implicaria na perca da qualidade das imagens e experiencias.</h4>
-            </div>
+                        <h4>Atualmente a aplicação é focara para desktop, portanto ainda não ha portabilidade menor que 600px de largura por 400px de altura, um tamanho menos implicaria na perca da qualidade das imagens e experiencias.</h4>
+                    </div>
+                </div>}
+
+
 
         </>
     )
