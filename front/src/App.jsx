@@ -4,11 +4,9 @@ import './sass/style.scss';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Header from './layout/header/Header.jsx'
-import Home from './pages/Home/Home.jsx'
+import Main from './pages/Main/Main.jsx'
 import Types from './pages/Types/Types.jsx'
 import PaintPage from './pages/PaintPage/PaintPage.jsx'
-import SideNavBar from './layout/sidebar/SideNavBar.jsx'; 
 import SculpPage from './pages/SculpPage/SculpPage.jsx';
 import BuildingsPage from './pages/BuildingsPage/BuildingsPage.jsx'
 import InverntorsPage from './pages/inventions/InverntorsPage.jsx'
@@ -26,10 +24,8 @@ function App() {
 
   return (
     <HashRouter>
-      <Header/>
-      <SideNavBar/>
       <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Main />} />
 
           <Route path="/types" element={<Types />} />
           <Route path="/paintPage" element={<PaintPage />} />

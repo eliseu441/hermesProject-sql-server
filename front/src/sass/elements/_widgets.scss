@@ -69,7 +69,7 @@ width: 100%;
     --base-size: var(--baseline) * 1.2;
     position: absolute;
 
-    background-image: url("./img/paint/wallpaper.jpg");
+    background-image: url("/layout/paint/wallpaper.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
@@ -106,14 +106,14 @@ width: 100%;
     transform-origin: 0% 0%;
     background-color: var(--page-bg);
 
-    background-image: url("./img/paint/book_page1.jpg");
+    background-image: url("/layout/paint/book_page1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .book__page:nth-of-type(1) {
 
-    background-image: url("./img/paint/book_page1.jpg");
+    background-image: url("/layout/paint/book_page1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -134,7 +134,7 @@ width: 100%;
     right: 0;
     pointer-events: none;
     transform-style: preserve-3d;
-    background-image: url("./img/paint/book_page1.jpg");
+    background-image: url("/layout/paint/book_page1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -145,7 +145,7 @@ width: 100%;
     z-index: 0;
     pointer-events: none;
     transform-style: preserve-3d;
-    background-image: url("./img/paint/book_page1.jpg");
+    background-image: url("/layout/paint/book_page1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -209,8 +209,10 @@ width: 100%;
 }
 
 .book__page .page__content-credits {
-    font-family: "Cormorant Garamond", serif;
-    ;
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-size: 1rem;
+  
     text-transform: uppercase;
     font-size: 2.5vh;
     letter-spacing: 1px;
@@ -219,7 +221,7 @@ width: 100%;
 .book__page .page__content-credits span {
     display: block;
     padding: 0 2vw 0 2vw;
-    font-weight: 700;
+    font-weight: bolder!important;
     font-size: 2vh;
     letter-spacing: 0;
 }
@@ -331,7 +333,6 @@ width: 100%;
     background-color: #d0d0d0;
     border-radius: 30px;
     position: relative;
-    color: black;
     overflow: hidden;
   }
 

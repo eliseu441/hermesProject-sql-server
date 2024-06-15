@@ -93,7 +93,7 @@ function SculpPage() {
                 </div>
                 <div class='bio-side'>
                 {loadBio == true ? <></>: 
-                <div class= 'bio-content'>
+                <div class= 'bio-content' >
 
                     <img class='icon-sizing mt-2' src={`/images/icons/${bioIcon}`} alt='' />
 

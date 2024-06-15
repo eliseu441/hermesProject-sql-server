@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import API from '../../services/Infos/Infos'
 import { DropdownList } from 'react-widgets';
 import 'react-widgets/styles.css';
-import { Carousel } from '3d-react-carousal';
 import cesar from '/layout/sculp/cesar_boust_nobackground.png';
+import Slider from "react-slick";
 
 function SculpPage() {
     const [author, setAuthor] = useState("MICHELANGELO");
@@ -20,6 +20,18 @@ function SculpPage() {
 
 
 
+    const settings = {
+        dots: true,
+        dotsClass: "slick-dots slick-thumb",
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    };
+    const nextImage = (side) => {
+        console.log(side)
+        var passSlide = side == 1 ? document.querySelector(".slick-next") : document.querySelector(".slick-prev")
+        passSlide.click()
+    }   
     const callApis = async (id_author, name) => {
         setLoading(true)
         setAuthor(name)
@@ -94,9 +106,15 @@ function SculpPage() {
                             {slides && loading == false ?
 
                                 <div  >
+                                <div class="button-right" onClick={e => nextImage(1)}></div>
+                                <div class="button-left" onClick={e => nextImage(2)}></div>
                                     <p class='culpTitle'>{author}</p>
+                                    <div className="slider-container">
+                                    <Slider {...settings}>
 
-                                    <Carousel slides={slides} autoplay={false} interval={5000} />
+                                    {slides}
+                                    </Slider>
+                                </div>
                                 </div>
                                 : <></>}
                         </div>
