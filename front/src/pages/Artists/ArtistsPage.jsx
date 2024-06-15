@@ -6,7 +6,6 @@ import arrow2 from './img/arrow right.png';
 function SculpPage() {
     const [loading, setLoading] = useState(false);
     const [loadBio, setLoadBio] = useState(false);
-    //  const [sidebar, setSidebar] = useState(false);
     const [page, setPage] = useState(0);
     const [data, setData] = useState([]);
     const [bioIcon, setBioIcon] = useState('');
