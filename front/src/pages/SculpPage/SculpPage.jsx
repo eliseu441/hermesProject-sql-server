@@ -3,7 +3,7 @@ import API from '../../services/Infos/Infos'
 import { DropdownList } from 'react-widgets';
 import 'react-widgets/styles.css';
 import { Carousel } from '3d-react-carousal';
-import cesar from '../../sass/elements/img/sculp/cesar_boust_nobackground.png';
+import cesar from '/layout/sculp/cesar_boust_nobackground.png';
 
 function SculpPage() {
     const [author, setAuthor] = useState("MICHELANGELO");

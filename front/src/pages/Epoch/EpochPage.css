@@ -323,6 +323,7 @@
 
       .button-return{
         height: 4.5vh;
+        min-height: 40px;
         letter-spacing: 1.2px;
         background-color: #ff9a3c;
         font-weight: bolder;

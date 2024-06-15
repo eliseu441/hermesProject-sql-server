@@ -18,7 +18,7 @@
         position: fixed;
         width: 100vw;
         height: 100vh;
-        background-image: url('./img/sculp/wallpaper_sculp.jpg');
+        background-image: url('./layout/sculp/wallpaper_sculp.jpg');
         background-size: contain;
         z-index:0;
     }
@@ -30,7 +30,7 @@
 
 .slider-right {
     display: block;
-  //      background-image: url('./img/sculp/arrow carousel left.png');
+  //      background-image: url('./layout/sculp/arrow carousel left.png');
         background-repeat: no-repeat;
         background-size: contain;
         width: 30vw;
@@ -48,7 +48,7 @@
 .slider-left { 
     
     display: block;
-//        background-image: url('./img/sculp/arrow carousel left.png');
+//        background-image: url('./layout/sculp/arrow carousel left.png');
         background-repeat: no-repeat;
         background-size: contain;
         width: 30vw;
@@ -83,7 +83,7 @@
         justify-content: start;
         align-items: center;
         position: absolute;
-        background-image: url("./img/sculp/header_cesar_black.png");
+        background-image: url("./layout/sculp/header_cesar_black.png");
         background-size: 200vh;
         
         background-repeat: no-repeat;
@@ -106,7 +106,7 @@
         justify-content: start;
         align-items: center;
         position: absolute;
-        background-image: url("./img/sculp/header_cesar_black.png");
+        background-image: url("./layout/sculp/header_cesar_black.png");
         background-size: 200vh;
         
         background-repeat: no-repeat;
@@ -188,7 +188,7 @@
         height: 100vh;
         display: flex;
         justify-content: center;
-        background-image: url("./img/types/wallpaper_hermes.jpg");
+        background-image: url("./layout/types/wallpaper_hermes.jpg");
         background-repeat: no-repeat;
         background-size: cover;    
         width: 100vw;
@@ -416,7 +416,7 @@
         transform: translateZ(22.5vh);
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: url("./img/types/cesar_cube.jpg");
+        background-image: url("./layout/types/cesar_cube.jpg");
     }
 
     .cube-stopped .front {
@@ -444,7 +444,7 @@
         transform: rotateX(90deg) translateZ(22.5vh);
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: url("./img/types/vitruvian_cube.jpg");
+        background-image: url("./layout/types/vitruvian_cube.jpg");
 
     }
 
@@ -460,7 +460,7 @@
         transform: rotateX(-90deg) translateZ(22.5vh);
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: url("./img/types/monalisa_cube.jpg");
+        background-image: url("./layout/types/monalisa_cube.jpg");
     }
 
     .cube-stopped .bottom {
@@ -475,7 +475,7 @@
         transform: rotateY(-90deg) translateZ(22.5vh);
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: url("./img/types/cube_Faust _and_Lilith.png");
+        background-image: url("./layout/types/cube_Faust _and_Lilith.png");
     }
 
     .cube-stopped .left {
@@ -490,7 +490,7 @@
         transform: rotateY(90deg) translateZ(22.5vh);
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: url("./img/types/cube_os_retirantes.jpg");
+        background-image: url("./layout/types/cube_os_retirantes.jpg");
     }
 
     .cube-stopped .right {
@@ -700,7 +700,7 @@
         justify-content: center;
         align-items: baseline;
 
-        background-image: url("./img/paint/wallpaper-authors.jpg");
+        background-image: url("./layout/paint/wallpaper-authors.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
@@ -748,7 +748,7 @@
         min-height: 100vh;
         position: relative;
         display: flex;
-      //  background: url("./img/build/sistine chapel.jpg");
+        background: url("./layout/buildings/sistine_chapel.jpg");
         background-position-x: 54vw;
         justify-content: center;
         align-items: center;
@@ -800,7 +800,7 @@
       }
     
       .modal-content .modal-body.background {
-  //      background-image: url("./img/build/back_modal.png");
+  //      background-image: url("./layout/build/back_modal.png");
         opacity: 1;
         background-size: 101%;
         background-repeat: no-repeat;
@@ -871,7 +871,7 @@
 
     
     .bio-side{
-        background-image: url("./img/artist/background-bio.jpg");
+        background-image: url("./layout/artist/background-bio.jpg");
         background-position-y: 50%;
         background-size: cover;
         width: 70vw;
@@ -888,7 +888,7 @@
     }
     .icons-side{
         overflow: hidden;
-        background-image: url("./img/artist/background-icons.jpg");
+        background-image: url("./layout/artist/background-icons.jpg");
         background-size: cover;
         width: 30vw;
         height: 100vh;

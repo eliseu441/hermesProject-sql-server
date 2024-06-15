@@ -2,13 +2,13 @@ import React, {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Route, Link, Routes, HashRouter } from 'react-router-dom';
 import './sass/style.scss';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Header from './layout/header/Header'
-import Home from './pages/Home/Home'
-import Types from './pages/Types/Types'
-import PaintPage from './pages/PaintPage/PaintPage'
-import SideNavBar from './layout/sidebar/SideNavBar';
+import Header from './layout/header/Header.jsx'
+import Home from './pages/Home/Home.jsx'
+import Types from './pages/Types/Types.jsx'
+import PaintPage from './pages/PaintPage/PaintPage.jsx'
+import SideNavBar from './layout/sidebar/SideNavBar.jsx'; 
 import SculpPage from './pages/SculpPage/SculpPage.jsx';
 import BuildingsPage from './pages/BuildingsPage/BuildingsPage.jsx'
 import InverntorsPage from './pages/inventions/InverntorsPage.jsx'

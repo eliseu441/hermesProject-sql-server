@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import API from '../../services/Infos/Infos'
 import 'react-widgets/styles.css';
-import Table from '../../components/bootstrapTable2';
+import Table from '../../components/bootstrapTable2.jsx';
 import colunas from './Utils/colunas';
 import Input from "react-widgets/cjs/Input";
 
@@ -76,7 +76,7 @@ function SculpPage() {
 
 
         {
-            style: { display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: 'max-content', height: '40px', padding: '0', margin: '0' },
+            style: { display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '40px', padding: '0', margin: '0' },
             headerStyle: headerStyle,
             dataField: 'DETAILS',
             text: 'DETAILS',

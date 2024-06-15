@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo_alexandre from '../../sass/elements/img/types/logo_alexandre.png';
-import logo_planador from '../../sass/elements/img/types/logo_planador.png';
-import van_gogh from '../../sass/elements/img/types/van_gogh.jpg';
-import notre_dame from '../../sass/elements/img/types/notre_dame.png';
+import logo_alexandre from '/layout/types/logo_alexandre.png';
+import logo_planador from '/layout/types/logo_planador.png';
+import van_gogh from '/layout/types/van_gogh.jpg';
+import notre_dame from '/layout/types/notre_dame.png';
 import API from '../../services/Infos/Infos'
 function Types() {
 
