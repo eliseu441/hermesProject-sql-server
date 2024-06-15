@@ -43,14 +43,11 @@ function SculpPage() {
     }
     const bioFunction = async (index) => {
         
-        await setLoadBio(true)
+        setLoadBio(true)
         
         setBioIcon(data[index].ICON)
         setBioTitle(data[index].NAME +': '+ data[index].BORN +' - '+ data[index].DEATH)
         setBioText(data[index].BIO)
-
-
-
 
         setLoadBio(false)
     }
