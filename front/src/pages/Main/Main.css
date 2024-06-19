@@ -221,9 +221,8 @@
     .imgSlider {
         background-size: cover; 
         background-color: #000000;
-        height: 76vh;
-        width: 51vw;
-
+        height: 76vh!important;
+        width: 51vw!important;
     }
 
     .slide1 {
