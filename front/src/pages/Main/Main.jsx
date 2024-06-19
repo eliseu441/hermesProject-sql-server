@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import './Main.css';
-import img_1 from './img/1.jpg';
-import img_2 from './img/2.jpg';
-import img_3 from './img/3.jpg';
-import img_4 from './img/4.jpg';
-import img_5 from './img/5.png';
 import moldura from './img/moldura_final-removebg-preview.png';
-import moldura_texto from './img/moldura_texto.png';
 import pergaminho from './img/pergaminho.png';
-import API from '../../services/Infos/Infos'
 import Preloader from "../../layout/preLoader/PreLoader";
 import Slider from "react-slick";
 function Main() {
