@@ -6,7 +6,6 @@ import colunas from './Utils/colunas';
 import Input from "react-widgets/cjs/Input";
 
 function SculpPage() {
-    //loading1 para carregar tabela, 2 para carregar dados da construção
     const [loading, setLoading] = useState(0);
     const [description, setDescription] = useState('');
     const [title, setTitle] = useState('');
@@ -109,8 +108,9 @@ function SculpPage() {
         <>
             {loading == 1 || loading == 2 ?
                 <div class='loader-background' >
+                    
+                    <div class="loader d-flex justify-content-center">
                     <p>{loading == 1 ? 'Loading Buildings Table' : loading == 2 ? 'Loading Build Content' : ''}</p>
-                    <div class="loader">
                     </div>
 
                 </div>
@@ -141,7 +141,7 @@ function SculpPage() {
                             </div>
                             <button type="button" class="btn-close" id="closeCircuito" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div className="col-12 d-flex justify-content-center swtch-content p-2  ">
+                        <div className="col-11 d-flex justify-content-center swtch-content p-2  ">
                                 <input id="checkbox_toggle" name="check" type="checkbox" class="check"
                                     onChange={(e) => changeContent(e.target.checked)}   >
                                 </input>

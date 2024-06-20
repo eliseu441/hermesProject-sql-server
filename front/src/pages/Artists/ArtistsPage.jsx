@@ -59,8 +59,9 @@ function SculpPage() {
         <>
             {loading == true ?
                 <div class='loader-background' >
-                    <p>Loading Page</p>
-                    <div class="loader">
+                    <div class="loader d-flex justify-content-center">
+                    <p>Loading artists</p>
+                    
                     </div>
 
                 </div>

@@ -68,8 +68,8 @@ function SculpPage() {
         <>
             {loading == true ?
                 <div class='loader-background' >
-                    <p>Loading Sculptures</p>
-                    <div class="loader">
+                    <div class="loader d-flex justify-content-center">
+                    <p>Loading sculptures</p>
                     </div>
 
                 </div>

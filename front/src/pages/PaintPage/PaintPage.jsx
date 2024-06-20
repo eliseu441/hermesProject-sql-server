@@ -114,39 +114,39 @@ function PaintPage() {
     return (
         <>
 
-{loading == true ?
+            {loading == true ?
                 <div class='loader-background' >
+                    <div class="loader d-flex justify-content-center">
                     <p>Loading Images</p>
-                    <div class="loader">
                     </div>
 
                 </div>
                 : <></>
             }
             <div class='paint-page '>
-            
+
                 <img src={napoleon} width='100' class={sidebar == false ? "logo-sidebar-authors" : "logo-sidebar-authors logo-expanded"} onClick={e => setSidebar(!sidebar)} />
 
-                
+
                 <div className={sidebar == false ? "sidebar-authors-border" : "sidebar-authors-border side-expanded-background-paint"}>
                 </div>
                 <div className={sidebar == false ? "sidebar-authors" : "sidebar-authors side-expanded"}>
                     <div class='choose-author'>
                         <p>author    </p>
-                        {sidebar == true?
-                        <DropdownList
-                            defaultValue="SANDRO BOTICELLI"
-                            data={comboAuthor ? comboAuthor : ['']}
-                            dataKey='ID'
-                            textField='NAME'
-                            onChange={e => callApis(e.ID)}
-                        />
-                        : <></>}
+                        {sidebar == true ?
+                            <DropdownList
+                                defaultValue="SANDRO BOTICELLI"
+                                data={comboAuthor ? comboAuthor : ['']}
+                                dataKey='ID'
+                                textField='NAME'
+                                onChange={e => callApis(e.ID)}
+                            />
+                            : <></>}
                     </div>
                 </div>
 
-               
-                
+
+
 
                 <div class="cover">
                     <div class="book">
@@ -157,7 +157,7 @@ function PaintPage() {
                                 <p class="page__content-credits">
                                     Instructions:
                                     <span class='mt-4'>2- Click on book sheet to see the next image</span>
-                                    <span class='mt-2'>3- you can filter the artists by clicking on napoleon</span>
+                                    <span class='mt-2'>3- you can filter artists by clicking on napoleon</span>
                                 </p>
                             </div>
                         </label>
@@ -239,8 +239,8 @@ function PaintPage() {
 
             <div class="aviso">
 
-<h4>Atualmente a aplicação é focara para desktop, portanto ainda não ha portabilidade menor que 600px de largura por 400px de altura, um tamanho menos implicaria na perca da qualidade das imagens e experiencias.</h4>
-</div>
+                <h4>Atualmente a aplicação é focara para desktop, portanto ainda não ha portabilidade menor que 600px de largura por 400px de altura, um tamanho menos implicaria na perca da qualidade das imagens e experiencias.</h4>
+            </div>
 
         </>
     )
