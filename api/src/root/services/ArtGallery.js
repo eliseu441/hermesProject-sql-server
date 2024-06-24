@@ -1,5 +1,5 @@
-//----------const dbFIBRA = require('../bds/FIBRA');
-const dbFIBRA = require('../../database/sqlserver');
+//----------const dbHermes = require('../bds/FIBRA');
+const dbHermes = require('../../database/sqlserver');
 const IntlBr = require('intl');
 const excel = require('exceljs');
 
@@ -17,7 +17,7 @@ class ArtGallery {
                 page = parseInt(params.page) * 3
             }
 
-            const sql = await dbFIBRA.query(`
+            const sql = await dbHermes.query(`
             SELECT [ID]
             ,[NAME]
             ,[NACIONALITY]
@@ -36,7 +36,7 @@ class ArtGallery {
     }
     async getTypesDesc(params) {
         try {
-            const sql = await dbFIBRA.query(`
+            const sql = await dbHermes.query(`
             SELECT  [ID]
             ,[TYPE]
             ,[TYPE_DESCRIPTION]
@@ -54,10 +54,10 @@ class ArtGallery {
             let where = { conditions: [], inputs: [] };
 
             where.conditions.push(`AND A.ID_ARTIST = ${id_artitst}`)
-            where.inputs.push({ key: 'ID_ARTIST', type: dbFIBRA.Int, value: 1 })
+            where.inputs.push({ key: 'ID_ARTIST', type: dbHermes.Int, value: 1 })
 
 
-            const res = await dbFIBRA.query(`
+            const res = await dbHermes.query(`
                 SELECT TOP(7)
                 CAST (ROW_NUMBER() OVER (ORDER BY A.PAINT_NAME  ) AS INT) AS ID_INDEX
                 ,B.NAME
@@ -87,10 +87,10 @@ class ArtGallery {
             let where = { conditions: [], inputs: [] };
 
             where.conditions.push(`AND A.ID_ARTIST = ${id_artitst}`)
-            where.inputs.push({ key: 'ID_ARTIST', type: dbFIBRA.Int, value: 10 })
+            where.inputs.push({ key: 'ID_ARTIST', type: dbHermes.Int, value: 10 })
 
 
-            const res = await dbFIBRA.query(`
+            const res = await dbHermes.query(`
             SELECT 
             CAST (ROW_NUMBER() OVER (ORDER BY A.SCULPTURE  ) AS INT) AS ID_INDEX
             ,B.NAME
@@ -112,7 +112,7 @@ class ArtGallery {
     }
     async getPaintersCombo(params) {
         try {
-            const sql = await dbFIBRA.query(`
+            const sql = await dbHermes.query(`
             SELECT DISTINCT A.ID
             ,NAME
             FROM [ART_GALLERY].[dbo].[TBF_ARTISTS] AS A 
@@ -126,7 +126,7 @@ class ArtGallery {
     }
     async getSculptorsCombo(params) {
         try {
-            const sql = await dbFIBRA.query(`
+            const sql = await dbHermes.query(`
             
                 
             SELECT DISTINCT A.ID
@@ -143,7 +143,7 @@ class ArtGallery {
     }
     async getBuildTable(params) {
         try {
-            const sql = await dbFIBRA.query(`
+            const sql = await dbHermes.query(`
             SELECT  
             [ID]
           ,[BUILD]
@@ -168,7 +168,7 @@ class ArtGallery {
 
             }
 
-            const images = await dbFIBRA.query(`
+            const images = await dbHermes.query(`
             SELECT
 
             B.ID
@@ -182,7 +182,7 @@ class ArtGallery {
       WHERE A.ID_BUILD = ${parseInt(params.id_build)}
           
             `);
-            const descriptions = await dbFIBRA.query(`
+            const descriptions = await dbHermes.query(`
             SELECT TOP (1) 
             [ID]
             ,CONCAT( BUILD , '-', COUNTRY ) AS TITLE
@@ -200,7 +200,7 @@ class ArtGallery {
 
     async getInventors(params) {
         try {
-            const sql = await dbFIBRA.query(`
+            const sql = await dbHermes.query(`
             SELECT
              [ID]
             ,[NAME]
@@ -222,7 +222,7 @@ class ArtGallery {
                         query para buildings caso precisar
             
             
-                        const sql = await dbFIBRA.query(`
+                        const sql = await dbHermes.query(`
                         SELECT  CASE WHEN EXISTS  (
                             SELECT  * 
                            FROM (SELECT
@@ -369,7 +369,7 @@ class ArtGallery {
                          END) AS XIX_BUILDINGS
                         `);
                         */
-            const paints = await dbFIBRA.query(`
+            const paints = await dbHermes.query(`
             
             SELECT  CASE WHEN EXISTS  (
                 SELECT ID FROM [ART_GALLERY].[dbo].[TBF_RELATION_ART_ARTISTS] WHERE YEAR BETWEEN 1200 AND 1299
@@ -414,7 +414,7 @@ class ArtGallery {
                 ELSE CAST(0 AS BIT) 
             END) AS XIX_PAINT    
             `);
-            const sculps = await dbFIBRA.query(`
+            const sculps = await dbHermes.query(`
             SELECT  CASE WHEN EXISTS  (
                 SELECT ID FROM [ART_GALLERY].[dbo].[TBF_RELATION_SCULPTURE_ARTISTS] WHERE YEAR BETWEEN 1200 AND 1299
                 ) 
@@ -500,7 +500,7 @@ class ArtGallery {
             }
 
             if (params.type == 1) {
-                const sql = await dbFIBRA.query(`
+                const sql = await dbHermes.query(`
             SELECT TOP (100) [ID]
             ,[ID_ARTIST]
             ,[SCULPTURE]
@@ -511,7 +511,7 @@ class ArtGallery {
                 return sql
 
             } else if (params.type == 2) {
-                const sql = await dbFIBRA.query(`
+                const sql = await dbHermes.query(`
                 SELECT TOP (100) [ID]
                 ,[ID_ARTIST]
                 ,[PAINT_NAME]
@@ -522,7 +522,7 @@ class ArtGallery {
                 return sql
 
             } else if (params.type == 3) {
-                const sql = await dbFIBRA.query(`
+                const sql = await dbHermes.query(`
                 SELECT
                     [BUILD]
                     ,[COUNTRY]
@@ -549,7 +549,7 @@ class ArtGallery {
     async getBCbuilds(params) {
         try {
 
-            const sql = await dbFIBRA.query(`
+            const sql = await dbHermes.query(`
             SELECT
             [BUILD]
             ,[COUNTRY]

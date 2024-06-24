@@ -3,11 +3,6 @@ const express = require('express');
 module.exports = (app) => {
     const router = express.Router();
 
-    //------------------------------------------------------------------------------------------
-    //              ROTAS DE PAGINA UPLOAD
-    //------------------------------------------------------------------------------------------
-
-
     router.get('/getTypesDesc', function (req,res,next) {
  
         app.root.models.ArtGallery.getTypesDesc(req.query)
