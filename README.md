@@ -2,5 +2,5 @@ para deploy é necessario fazer o build, colocar o build dentro da pasta api com
 
 doploy https:https://hermesproject-sql-server.onrender.com/
 
-deploy na cloud http(mais rapido): 34.121.103.54/#/buildingsPage
+deploy na cloud http(mais rapido): http://34.121.103.54/#/
 
